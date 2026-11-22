@@ -1,0 +1,5 @@
+files/review-cache/local-verification/toolchain/
+files/review-cache/local-verification/project/
+files/review-cache/local-verification/trust-audit/paper-project/
+files/upstream-rh/
+**/__pycache__/

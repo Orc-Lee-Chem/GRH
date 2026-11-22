@@ -1,0 +1,26 @@
+{
+  "good": {
+    "command": [
+      "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+      "-j1",
+      "-M1536",
+      "KexactControlGood.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 2.047,
+    "peak_rss_bytes": 797265920,
+    "output": ""
+  },
+  "bad": {
+    "command": [
+      "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+      "-j1",
+      "-M1536",
+      "KexactControlBad.lean"
+    ],
+    "exit_code": 1,
+    "seconds": 1.735,
+    "peak_rss_bytes": 793202688,
+    "output": "KexactControlBad.lean:10:8: error: (kernel) declaration type mismatch, 'controlBad' has type\n  True\nbut it is expected to have type\n  False\n"
+  }
+}

@@ -1,0 +1,9 @@
+'TrustControls.extraAxiom' depends on axioms: [missingFact]
+TrustControls.lean:10:8: warning: declaration uses `sorry`
+'TrustControls.incomplete' depends on axioms: [sorryAx]
+theorem TrustControls.conditional : False → 0 = 1 :=
+fun h => False.elim h
+'TrustControls.conditional' does not depend on any axioms
+def TrustControls.Shadowed.RiemannHypothesis : Prop :=
+True
+'TrustControls.Shadowed.fakeRH' does not depend on any axioms

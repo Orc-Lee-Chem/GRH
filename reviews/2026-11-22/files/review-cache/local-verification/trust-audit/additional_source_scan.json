@@ -1,0 +1,17 @@
+{
+  "command": [
+    "git",
+    "grep",
+    "--threads=2",
+    "-n",
+    "-P",
+    "-e",
+    "set_option\\s+debug\\.|skipKernelTC|\\bopaque\\b",
+    "HEAD",
+    "--",
+    "src/*.lean"
+  ],
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": ""
+}

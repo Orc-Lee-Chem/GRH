@@ -1,0 +1,6 @@
+RejectWrongGoal.lean:8:35: error: Type mismatch
+  candidate
+has type
+  RiemannHypothesis
+but is expected to have type
+  0 = 1

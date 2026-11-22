@@ -1,0 +1,6 @@
+reviews/2026-11-22/** -text
+bundles/*.zip binary
+README.md text eol=lf
+SHA256SUMS.txt text eol=lf
+scripts/verify_repository_hashes.py text eol=lf
+.gitattributes text eol=lf

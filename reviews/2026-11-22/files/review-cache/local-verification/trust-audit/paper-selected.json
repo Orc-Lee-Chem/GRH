@@ -1,0 +1,50 @@
+[
+  {
+    "module": "Development.AutomorphicArithmetic.CharacterBoxes.ZeroFreeAllOfTopG",
+    "hash": "e3e8261a9dfab6cb",
+    "archive": "26b2e0a69f9ee50b.ltar",
+    "sha256": "23c0ad0f75e78cbfaaa918fc292a87ea8ef308f5fc7fb49130f559122bb9d68e",
+    "bytes": 7182,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/26b2e0a69f9ee50b.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.DIVRecBridgeSel",
+    "hash": "54e6356e5da9a106",
+    "archive": "e8841fa4a93087bd.ltar",
+    "sha256": "75eab07669f243ddc0936d8d80a53fe3662ffccfbc5d54d9ffe0eec951cf5578",
+    "bytes": 135018,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/e8841fa4a93087bd.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ShapeOf",
+    "hash": "13bba50ea041d9bd",
+    "archive": "6435f0c27b348a26.ltar",
+    "sha256": "39d977a1904f6407de4dc83d746b34ba6dba6e297d12c3ded8ec6d0f92fc0393",
+    "bytes": 23906,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/6435f0c27b348a26.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopPlug",
+    "hash": "f752d839907a2de4",
+    "archive": "45541acb9d184c87.ltar",
+    "sha256": "a584698b0fa1b3ad92933b3cfb8f1e4c3c38b9f05c95b9bac8e519e10d553559",
+    "bytes": 3615,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/45541acb9d184c87.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.TopShape",
+    "hash": "97df89fa0dc9538e",
+    "archive": "bcf7da5f672d83a2.ltar",
+    "sha256": "e574cd0d4b9f3b24ff2e85e92ca41e1187c3c2ba8178d548f885128fb0ae8a68",
+    "bytes": 16898,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/bcf7da5f672d83a2.art"
+  },
+  {
+    "module": "Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.TopWin",
+    "hash": "6128e2844d626590",
+    "archive": "b18fc4980fa4b931.ltar",
+    "sha256": "27676c41f92ec6d8a2896e3a6b40a67f04a6d6ca296eefc974ee55eed76f5806",
+    "bytes": 24151,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/b18fc4980fa4b931.art"
+  }
+]

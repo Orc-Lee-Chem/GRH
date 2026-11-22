@@ -1,0 +1,138 @@
+{
+  "mit_index.html": {
+    "url": "https://math.mit.edu/~drew/grh/",
+    "retrieved_utc": "2026-11-22T07:22:35.105904+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/",
+    "bytes": 27222,
+    "sha256": "01a43fc8defab818d878bfa8fd900d7563073db3dbc6f150ad73baec0fe388a7"
+  },
+  "mit_audit.log": {
+    "url": "https://math.mit.edu/~drew/grh/audit.log",
+    "retrieved_utc": "2026-11-22T07:22:35.105904+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/audit.log",
+    "bytes": 2062,
+    "sha256": "0a1473fce6eed840011f4a76b1c51558fc6f03edd1e6bd1ee542e6c738d87a62"
+  },
+  "con-leche-compare.log": {
+    "url": "https://math.mit.edu/~drew/grh/con-leche-compare.log",
+    "retrieved_utc": "2026-11-22T07:22:35.106912+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/con-leche-compare.log",
+    "bytes": 5875,
+    "sha256": "5a068bf55f24904eea9f05eda947c63d43bdee3c6ab0490e43943a3bd9af1f6e"
+  },
+  "con-ron-compare.log": {
+    "url": "https://math.mit.edu/~drew/grh/con-ron-compare.log",
+    "retrieved_utc": "2026-11-22T07:22:35.106912+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/con-ron-compare.log",
+    "bytes": 2969,
+    "sha256": "dcf2fbbde0e27ef8828b7d788ea7b9f9f65ba7a8246798ffd47298f89a3ee2ff"
+  },
+  "nanoda.log": {
+    "url": "https://math.mit.edu/~drew/grh/nanoda.log",
+    "retrieved_utc": "2026-11-22T07:22:36.745220+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/nanoda.log",
+    "bytes": 852,
+    "sha256": "d4c5360b02d8dd885150c1cc28b616cb6fb5bf5b20d142558d79a7b15ae9d9df"
+  },
+  "comparator.json": {
+    "url": "https://math.mit.edu/~drew/grh/comparator.json",
+    "retrieved_utc": "2026-11-22T07:22:36.766160+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/comparator.json",
+    "bytes": 460,
+    "sha256": "8ea890e6ccda9cf3983ada343af18a41d12542036875a3936e7925ed5b1582ff"
+  },
+  "sandbox-build.sh": {
+    "url": "https://math.mit.edu/~drew/grh/sandbox-build.sh",
+    "retrieved_utc": "2026-11-22T07:22:36.772774+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/sandbox-build.sh",
+    "bytes": 5202,
+    "sha256": "40a32f7ee81f4c0bbd80822fff5061c017b7e64a2087789c80130185f7cfff34"
+  },
+  "sandbox-timeline.txt": {
+    "url": "https://math.mit.edu/~drew/grh/sandbox-timeline.txt",
+    "retrieved_utc": "2026-11-22T07:22:36.775104+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/sandbox-timeline.txt",
+    "bytes": 7376,
+    "sha256": "610dafdbc29c51433906d59b6e0c5ce8b48808770bf53cf7e2dc8fd93c63792c"
+  },
+  "SHA256SUMS": {
+    "url": "https://math.mit.edu/~drew/grh/SHA256SUMS",
+    "retrieved_utc": "2026-11-22T07:22:37.859342+00:00",
+    "status": 200,
+    "final_url": "https://math.mit.edu/~drew/grh/SHA256SUMS",
+    "bytes": 3078,
+    "sha256": "3c902adefbaf5471db0384b7f5eb1233d1c1a2efcc6a2f8a439754e58dd84042"
+  },
+  "mathlib_RiemannZeta.lean": {
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean",
+    "retrieved_utc": "2026-11-22T07:22:37.860347+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/RiemannZeta.lean",
+    "bytes": 12306,
+    "sha256": "db9f37f08bcce379c502549f604c0e98bf4a39b3a3440606861bbac847f2a1a9"
+  },
+  "mathlib_DirichletContinuation.lean": {
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean",
+    "retrieved_utc": "2026-11-22T07:22:37.868995+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/LSeries/DirichletContinuation.lean",
+    "bytes": 18979,
+    "sha256": "86d3aaad83e64cb64a24167fd4ddb2eeec5ca4a19a9298459e87a57fec151040"
+  },
+  "mathlib_DirichletBasic.lean": {
+    "url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean",
+    "retrieved_utc": "2026-11-22T07:22:37.965236+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/leanprover-community/mathlib4/0df444a360eaa60ab8c11dca51a86af692955474/Mathlib/NumberTheory/DirichletCharacter/Basic.lean",
+    "bytes": 26329,
+    "sha256": "f004670a9bedc23c4dfaeb61b90d5e613a6b604f9486640eb1ce4ae3699ef64e"
+  },
+  "lean_Environment.lean": {
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/Lean/Environment.lean",
+    "retrieved_utc": "2026-11-22T07:22:38.915152+00:00",
+    "status": 200,
+    "final_url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/src/Lean/Environment.lean",
+    "bytes": 137725,
+    "sha256": "ee364e4788ce0560c87f621eeb3c4c3dfec62e8db4e15e099fd80e6adc533b86"
+  },
+  "author_publications.html": {
+    "url": "https://philpeople.org/profiles/jenny-lorraine-nielsen/publications?iframe=true&order=added",
+    "retrieved_utc": "2026-11-22T07:22:39.178901+00:00",
+    "status": 403,
+    "final_url": "https://philpeople.org/profiles/jenny-lorraine-nielsen/publications?iframe=true&order=added",
+    "bytes": 5756,
+    "sha256": "dd13cc8a9895d0eca462aea868ae57d1e405711e46af61e64f779af8f73a4aa0"
+  },
+  "paper_latest": {
+    "url": "https://philarchive.org/archive/NIEIOT-2v14",
+    "retrieved_utc": "2026-11-22T07:22:39.213590+00:00",
+    "status": 403,
+    "final_url": "https://philarchive.org/archive/NIEIOT-2v14",
+    "bytes": 5515,
+    "sha256": "0b43643672f303c939a4c46cd43c2cc8183db9760a831d903d234b9d68b9b13a"
+  },
+  "paper_www": {
+    "url": "https://www.philarchive.org/archive/NIEIOT-2v14",
+    "retrieved_utc": "2026-11-22T07:22:39.247450+00:00",
+    "status": 403,
+    "final_url": "https://philarchive.org/archive/NIEIOT-2v14",
+    "bytes": 5515,
+    "sha256": "dba8aa27b4f483fdbda13d4329ace7fc8eacf4c8e231b3f9e96a43084482fcbe"
+  },
+  "paper_download": {
+    "url": "https://philarchive.org/archive/NIEIOT-2v14?download=1",
+    "retrieved_utc": "2026-11-22T07:22:39.846668+00:00",
+    "status": 403,
+    "final_url": "https://philarchive.org/archive/NIEIOT-2v14?download=1",
+    "bytes": 5563,
+    "sha256": "9a23462488601d71a2790a7058f3ee8ddaba851c0d0572c56248c015e7c49bac"
+  }
+}

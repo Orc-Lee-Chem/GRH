@@ -1,4 +1,7 @@
 > **CORRECTION (2026-11-22):** An independent review found real errors in the earlier submission and showed that the earlier "final theorem is vacuous / does not prove GRH" conclusion was too strong. See [CORRECTION.md](CORRECTION.md). The formal proof of the standard `RiemannHypothesis` stands; the degenerate definitions are an internal/faithfulness issue, not by themselves a formal-validity disproof.
+
+> **Follow-up verification package (2026-11-22):** [Conclusions / 中文结论](reviews/2026-11-22/CONCLUSIONS.md), [local checks, Nielsen PDF review, scripts and receipts](reviews/2026-11-22/README.md), and [downloadable ZIP](bundles/GRH-review-2026-11-22.zip). The available evidence strongly supports the fixed Mathlib RH statement. The local checks are targeted; full-proof verification is attributed to the linked external records.
+
 # GRH Lean audit materials
 
 This repository contains an independent audit of the Alpöge/Claude Lean 4 formalization of the
@@ -14,12 +17,16 @@ vacuous/degenerate definitions:
 - `Formalism.L2.Geo.geoDegenerate` — `vol = 0`, `Cl = PUnit`, all geometric predicates `True`
 - `Formalism.L2.Geo.divXFl` — `CurveM = PUnit`, `degM = 0`, `iMj = 0`
 
-The real `GlobalTheory.Published.SiegelEisensteinSimplePole` is defined in the archive but is
-not proved; the main bundle replaces its field with `UnusedSlot72`.
+The real `GlobalTheory.Published.SiegelEisensteinSimplePole` is defined in the archive. An
+exact-name source search found no explicit unconditional theorem proving it; equivalent
+reformulations and a full environment search remain unverified. The main bundle's similarly
+named field has type `UnusedSlot72`; this has not been shown to be a necessary missing premise
+of the final RH theorem.
 
 More precisely:
 
-- The archive **never proves** the real `SiegelEisensteinSimplePole`.
+- No explicit unconditional theorem with that named conclusion was found in the source search;
+  this is not a proof that no equivalent or indirect derivation exists.
 - The main bundle uses `UnusedSlot72` for that field.
 - A proof-term BFS from `rhOfAll` reaches `UnusedSlot72`, `siegel_eisenstein_simple_pole`,
   `anyGeometry`, `geoDegenerate`, `divXFl`, `exists_divT`, `divEx_prov`.
@@ -56,7 +63,14 @@ Get-Content logs/bfs2.log
 
 ## Integrity
 
-See `SHA256SUMS.txt`. Each file's SHA-256 is listed there.
+See `SHA256SUMS.txt`. The hashes refer to Git blob bytes, as supplied in GitHub source archives.
+Windows checkouts may convert older files to CRLF. Verify the committed bytes with:
+
+```powershell
+python scripts/verify_repository_hashes.py
+```
+
+The follow-up ZIP also contains its own `MANIFEST.sha256` for the extracted package files.
 
 ## Caveat
 

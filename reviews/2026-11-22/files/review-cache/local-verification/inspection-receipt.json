@@ -1,0 +1,15 @@
+{
+  "command": [
+    "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+    "-j1",
+    "-M2048",
+    "--tstack=400000",
+    "--run",
+    "InspectSelected.lean",
+    "olean-list.txt",
+    "inspect.jsonl"
+  ],
+  "exit_code": 0,
+  "seconds": 1.125,
+  "peak_rss_bytes": 320364544
+}

@@ -1,0 +1,87 @@
+{
+  "kernel_command": [
+    "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+    "-j1",
+    "-M1024",
+    "--run",
+    "ReplaySlot.lean",
+    "project/.lake/build/lib/lean/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/LocalTypeDictionary/DiscreteSpectrumResidualClassification.olean"
+  ],
+  "kernel_exit_code": 0,
+  "kernel_seconds": 1.375,
+  "kernel_peak_rss_bytes": 671449088,
+  "kernel_output": "ORIGINAL_SLOT_KERNEL_REPLAY=PASS\nTRUE_INTRO_HAS_ORIGINAL_SLOT_TYPE=PASS\nMALFORMED_FALSE_PROOF_REJECTED=PASS\n",
+  "baseline_source_diff": "A\tsrc/Challenge.lean\n",
+  "source_excerpts": {
+    "height_formula": {
+      "path": "src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/SetUnipotentTranslate.lean",
+      "commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+      "url": "https://github.com/CocoSgt/riemann-hypothesis-lean/blob/7cbf7a0c32fca1badf05931879a37c3f8a2b03b4/src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/SetUnipotentTranslate.lean",
+      "ranges": [
+        {
+          "start": 25,
+          "end": 31,
+          "text": "25: @[reducible] def setDiv (D : D7) (N : ∀ u, Submodule (𝓞 D.what₂.LL) (D.div.Nu u).V) (h : D.what₂.Word → ℝ) : D7 :=\n26:   { D with\n27:     div := { D.div with\n28:       Nu := fun u => { D.div.Nu u with L := N u }\n29:       h := h\n30:       HH := max 1 (sFrame (fun u => { D.div.Nu u with L := N u }) h + D.div.RR.muMax)\n31:       HH_ge := le_max_right _ _ } }"
+        },
+        {
+          "start": 379,
+          "end": 406,
+          "text": "379: def ht : D.what₂.Word → ℝ := DV.hExpl6 D p.L Y.X C.Csz\n380: \n381: def pt : Pt C where\n382:   D := setDiv D (nPrime p.L) p.ht\n383:   L := ledTr (nPrime p.L) p.ht p.L\n384:   gatT := gatTr (nPrime p.L) p.ht Y.gatT\n385:   ta :=\n386:     { Gx := instTr (nPrime p.L) p.ht p.ta.Gx\n387:       Gy := latTr (nPrime p.L) p.ht Y.Gy\n388:       supp_sat := p.ta.supp_sat\n389:       tw_supp := p.ta.tw_supp\n390:       fills := fun w => fills_tr (D := D) (nPrime p.L) p.ht p.ta.Gx C.GK w (p.ta.fills w)\n391:       lats0 := fun w u h1 h2 => p.ta.lats0 w u (by rw [← VV_tr (nPrime p.L) p.ht]; exact h1) h2\n392:       latTied := (p.Gy_eq ▸ p.ta.latTied : G.LatTied Y.gatT p.ta.Gx Y.Gy)\n393:       drop_iff := p.ta.drop_iff }\n394:   xa :=\n395:     { ties := { Y.ties with }\n396:       X := divTr (nPrime p.L) p.ht Y.X\n397:       nuDef := p.nuDef\n398:       nprimeDef := fun _ => rfl\n399:       rrDef := Y.rrDef\n400:       h_eq := fun _ => rfl\n401:       ex := extraTr (nPrime p.L) p.ht p.extra }\n402: \n403: theorem pt_D : p.pt.D = setDiv D (nPrime p.L) p.ht := rfl\n404: \n405: theorem pt_sc : p.pt.L.sc = p.L.sc := rfl\n406: "
+        }
+      ]
+    },
+    "height_estimates": {
+      "path": "src/Formalism/SharpRestriction/Divisibility/SlopeExcess/HeightBoundOfComponentBounds.lean",
+      "commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+      "url": "https://github.com/CocoSgt/riemann-hypothesis-lean/blob/7cbf7a0c32fca1badf05931879a37c3f8a2b03b4/src/Formalism/SharpRestriction/Divisibility/SlopeExcess/HeightBoundOfComponentBounds.lean",
+      "ranges": [
+        {
+          "start": 136,
+          "end": 152,
+          "text": "136: theorem height_bound_of_component_bounds {eps : ℝ} (Fm : FamP eps) (CH : ℝ) (Eb Ec CF0 : List ℝ → ℝ)\n137:     (hL : Fm.Large (thrHH Eb Ec CF0) CH)\n138:     (h4 : Formalism.MainNotions.LocalQuadraticParts.SlopeLemmaFamily Fm) (hrk : Formalism.MainNotions.J.MuRank Fm)\n139:     (hfull : ∃ x0 : ℝ, ∀ x ≥ x0, ∀ i : Fm.Ix x, (Fm.D x i).NuFull)\n140:     (hb : ∃ x0 : ℝ, ∀ x ≥ x0, Fm.x1 < x → ∀ (i : Fm.Ix x) u,\n141:       (((Fm.D x i).fm u).lat 0).muMax ≤ (Fm.L x i).sc.x ^ Eb Fm.cOut * (Fm.L x i).sc.b)\n142:     (hc : ∃ x0 : ℝ, ∀ x ≥ x0, Fm.x1 < x → ∀ (i : Fm.Ix x) u,\n143:       (Fm.L x i).Ga + (Fm.L x i).Fo - (Fm.L x i).Ee u ≤ (Fm.L x i).sc.x ^ Ec Fm.cOut * (Fm.L x i).sc.b)\n144:     (hTu : TuSize Fm)\n145:     (he : ∃ x0 : ℝ, ∀ x ≥ x0, ∀ (_ : Fm.x1 < x) (i : Fm.Ix x),\n146:       (Fm.D x i).div.RR.muMax + meanE (Fm.D x i) (fun e => Real.log ((Fm.X x i).kapR e)) ≤\n147:         (Fm.L x i).sc.x ^ CF0 Fm.cOut * (Fm.L x i).sc.b) :\n148:     Formalism.MainNotions.LocalQuadraticParts.FrameNumberBoundFamily Fm Fm.Csz CH :=\n149:   height_bound_of_slope_fullness Fm CH h4 hrk hfull\n150:     (hhRest_of_parts Fm CH Eb Ec CF0 (hL.2.2.1 CH List.mem_cons_self) hb hc hTu he)\n151: \n152: end Formalism.MainNotions.DIV.Proofs"
+        }
+      ]
+    },
+    "vacuous_geometry_closure": {
+      "path": "src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/NotGeoClFalse.lean",
+      "commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+      "url": "https://github.com/CocoSgt/riemann-hypothesis-lean/blob/7cbf7a0c32fca1badf05931879a37c3f8a2b03b4/src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/NotGeoClFalse.lean",
+      "ranges": [
+        {
+          "start": 21,
+          "end": 28,
+          "text": "21: inductive GeoCl (Γ : GeoP) : ∀ D : D7, Formalism.L2.Pj.Core D → DivX D → Prop\n22:   | base {D : D7} {J : Formalism.L2.Pj.Core D} {X : DivX D} : Γ D J X → GeoCl Γ D J X\n23:   | step {D : D7} (N : ∀ u, Submodule (𝓞 D.what₂.LL) (D.div.Nu u).V) (h : D.what₂.Word → ℝ)\n24:       {J : Formalism.L2.Pj.Core D} {X : DivX D} : GeoCl Γ D J X → GeoCl Γ (setDiv D N h) (coreS N h J) (divTr N h X)\n25: \n26: def geoCl (Γ : GeoP) : GeoP := GeoCl Γ\n27: \n28: theorem geoCl_of {Γ : GeoP} {D : D7} {J : Formalism.L2.Pj.Core D} {X : DivX D} (h : Γ D J X) : geoCl Γ D J X := GeoCl.base h"
+        }
+      ]
+    },
+    "empty_lattice_witness": {
+      "path": "src/Formalism/LocalRingCardinality/SpanPowerMembership/NZRowD.lean",
+      "commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+      "url": "https://github.com/CocoSgt/riemann-hypothesis-lean/blob/7cbf7a0c32fca1badf05931879a37c3f8a2b03b4/src/Formalism/LocalRingCardinality/SpanPowerMembership/NZRowD.lean",
+      "ranges": [
+        {
+          "start": 14,
+          "end": 39,
+          "text": "14: def divXStd (n : ℕ → ℕ) (bM : ∀ j, OrthonormalBasis (Fin (n j)) ℂ (D.what₂.Mj j))\n15:     (hg : ∀ j, (D.what₂.MjLat j).gen = genB (bM j)) (kap : ℝ) (hk : 0 < kap) : DivX D where\n16:   geo := geoExample _\n17:   Lev := Empty\n18:   levPr := fun κ => κ.elim\n19:   shv := fun _ κ => κ.elim\n20:   shv_N := fun _ κ => κ.elim\n21:   shv_lev := fun _ κ => κ.elim\n22:   PlP := fun p _ => {w : D.what₂.places.Pl // D.what₂.places.resChar w = p}\n23:   plpFin := fun p _ => PlOver.plFin D p\n24:   plpNe := fun p _ => PlOver.plNe D p\n25:   wtP := fun p _ la => PlOver.wt D p la.1\n26:   divisorWeight_nonneg := fun p _ la => PlOver.wt_nonneg D p la.1\n27:   divisorWeight_sum := fun p _ => PlOver.wt_sum D p\n28:   plP := fun _ _ => Equiv.refl _\n29:   divisorWeight_def := fun _ _ _ => rfl\n30:   jC := fun p _ _ => (teich_Om_equiv p).some.toRingHom.comp (algebraMap (DV.KW p) (TeichOm p))\n31:   Mp := fun _ κ => κ.elim\n32:   md := fun _ κ => κ.elim\n33:   vdd := fun _ _ => 0\n34:   vdd_unram := fun _ _ _ => rfl\n35:   vdd_nonneg := fun _ _ => le_rfl\n36:   CurveM := fun _ κ => κ.elim\n37:   degM := fun _ κ => κ.elim\n38:   htMdl := fun _ κ => κ.elim\n39:   htCurve := fun _ κ => κ.elim"
+        }
+      ]
+    },
+    "divisor_witnesses": {
+      "path": "src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean",
+      "commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+      "url": "https://github.com/CocoSgt/riemann-hypothesis-lean/blob/7cbf7a0c32fca1badf05931879a37c3f8a2b03b4/src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean",
+      "ranges": [
+        {
+          "start": 694,
+          "end": 703,
+          "text": "694:     Mp := fun _ _ _ _ _ => PUnit\n695:     md := fun S _ p _ la _ => mdlJunk D p (jC p la) (recN D S) (recJ D S) (recJ_lt D S).le\n696:     phiFr_unram := fun _ _ _ y => Empty.elim y\n697:     CurveM := fun _ _ _ _ _ _ => Empty\n698:     degM := fun _ _ _ _ _ _ c => Empty.elim c\n699:     htMdl := fun _ _ _ _ _ => PUnit.unit\n700:     htCurve := fun _ _ _ _ => Equiv.refl _\n701:     htCurve_deg := fun _ _ _ _ c => Empty.elim c.2\n702:     Comp := fun _ => PUnit\n703:     compFin := fun _ => inferInstance"
+        },
+        {
+          "start": 829,
+          "end": 861,
+          "text": "829: def divXFl : DivX D :=\n830:   { X0 with\n831:     geo := geoDegenerate D.what₂.LL D.what₂.Tau\n832:     Lev := Unit\n833:     levPr := fun _ => Finset.univ.image D.host.g\n834:     shv := fun S _ => shimXFl D jC (recN D S) (recJ D S) (recJ_pos D S) (recJ_lt D S)\n835:     shv_N := fun S _ h => by show recN D S = _; unfold recN; rw [if_pos h]\n836:     shv_lev := fun _ _ => rfl\n837:     PlP := fun p _ => PlL D p\n838:     plpFin := fun p _ => finPl D p\n839:     plpNe := fun p _ => plL_ne D p\n840:     wtP := fun p _ => wtL D p\n841:     divisorWeight_nonneg := fun p _ => wtL_nonneg D p\n842:     divisorWeight_sum := fun p _ => wtL_sum D p\n843:     plP := fun p _ => Formalism.BasicNotions.Examples₂.PlOver.plLEquiv D p\n844:     divisorWeight_def := fun p _ la => Formalism.BasicNotions.Examples₂.PlOver.wtLog_eq D p la\n845:     jC := fun p _ => jC p\n846:     Mp := fun _ _ _ _ _ => PUnit\n847:     md := fun S _ p _ la _ => mdlJunk D p (jC p la) (recN D S) (recJ D S) (recJ_lt D S).le\n848:     phiFr_unram := fun _ _ _ _ _ _ => rfl\n849:     CurveM := fun _ _ _ _ _ _ => PUnit\n850:     degM := fun _ _ _ _ _ _ _ _ => 0\n851:     htMdl := fun _ _ _ _ _ => PUnit.unit\n852:     htCurve := fun _ _ _ _ => Equiv.refl _\n853:     htCurve_deg := fun _ _ _ _ _ => rfl\n854:     Comp := fun _ => PUnit\n855:     compFin := fun _ => inferInstance\n856:     degHH := fun _ _ _ => 0\n857:     Yv := fun j _ => (datW D () j).N\n858:     Ybd := fun _ _ => PUnit.unit\n859:     Lw := fun j _ => lwFl D j\n860:     iMj := fun j _ => (0 : (X0.MjH j).V →ₗ[D.what₂.LL] D.what₂.LL)\n861:     iMj_mem := fun _ _ _ => Submodule.mem_top }"
+        }
+      ]
+    }
+  }
+}

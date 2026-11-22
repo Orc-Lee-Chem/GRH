@@ -1,0 +1,117 @@
+{
+  "source_commit": "7cbf7a0c32fca1badf05931879a37c3f8a2b03b4",
+  "source_clean": true,
+  "lean_file_count": 175187,
+  "reserved_module_paths": [],
+  "lexical_scans": {
+    "axioms_sorry": {
+      "line_count": 0,
+      "file_count": 0,
+      "pattern": "\\b(?:axiom|sorry|sorryAx|admit)\\b",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "\\b(?:axiom|sorry|sorryAx|admit)\\b",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    },
+    "native_evaluation": {
+      "line_count": 0,
+      "file_count": 0,
+      "pattern": "\\b(?:native_decide|bv_decide)\\b|\\bdecide\\s+\\+native\\b|Lean\\.(?:trustCompiler|ofReduceBool|ofReduceNat)",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "\\b(?:native_decide|bv_decide)\\b|\\bdecide\\s+\\+native\\b|Lean\\.(?:trustCompiler|ofReduceBool|ofReduceNat)",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    },
+    "unsafe_ffi": {
+      "line_count": 0,
+      "file_count": 0,
+      "pattern": "\\b(?:unsafe|implemented_by|extern)\\b",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "\\b(?:unsafe|implemented_by|extern)\\b",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    },
+    "metaprogramming": {
+      "line_count": 130,
+      "file_count": 88,
+      "pattern": "\\b(?:initialize|builtin_initialize|elab_rules|macro_rules|macro|elab|syntax|run_tac|run_elab|addDecl|setEnv|modifyEnv|skipKernelTC)\\b|#eval|Lean\\.Environment",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "\\b(?:initialize|builtin_initialize|elab_rules|macro_rules|macro|elab|syntax|run_tac|run_elab|addDecl|setEnv|modifyEnv|skipKernelTC)\\b|#eval|Lean\\.Environment",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    },
+    "critical_definitions": {
+      "line_count": 13,
+      "file_count": 9,
+      "pattern": "^\\s*(?:(?:noncomputable|private|protected|unsafe)\\s+)*(?:def|abbrev|opaque|axiom|theorem|inductive|structure)\\s+(?:_root_\\.)?(?:RiemannHypothesis|riemannZeta|DirichletCharacter|Real|Complex|Nat)(?:\\s|\\.|:|\\{|\\(|$)",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "^\\s*(?:(?:noncomputable|private|protected|unsafe)\\s+)*(?:def|abbrev|opaque|axiom|theorem|inductive|structure)\\s+(?:_root_\\.)?(?:RiemannHypothesis|riemannZeta|DirichletCharacter|Real|Complex|Nat)(?:\\s|\\.|:|\\{|\\(|$)",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    },
+    "options": {
+      "line_count": 88137,
+      "file_count": 75196,
+      "pattern": "^\\s*set_option\\b",
+      "command": [
+        "git",
+        "grep",
+        "--threads=2",
+        "-n",
+        "-z",
+        "-P",
+        "-e",
+        "^\\s*set_option\\b",
+        "HEAD",
+        "--",
+        "src/*.lean"
+      ]
+    }
+  },
+  "warning": "Lexical scans include comments and strings; zero hits are not a proof of semantic absence. Public receipts are external evidence, not local full kernel replay."
+}
