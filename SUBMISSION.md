@@ -34,7 +34,8 @@ Independent kernel/comparator records report acceptance with only `propext`,
 
 - **Source scan:** all 175,187 Lean modules; no `sorry`, extra axiom, `native_decide`,
   `implemented_by`, `opaque`/`constant` abuse in the audited source.
-- **Proof-term graph:** 175,179 `.olean` files; 1,919,524 value edges; BFS from `rhOfAll` reaches
+- **Proof-term graph:** 175,179 `.olean` files; 1,919,524 declaration-reference-list records
+  (one record per declaration; each record lists the constants used in its value); BFS from `rhOfAll` reaches
   1,309,474 constants. This is a reachability graph, not a semantic necessity proof.
 - **Definitions:** inspected `UnusedSlot72`, `anyGeometry`, `geoDegenerate`, `divXFl`,
   `exists_divT`, `divEx_prov`.
@@ -61,14 +62,14 @@ Independent kernel/comparator records report acceptance with only `propext`,
 - `divXFl`: `CurveM = PUnit`, `degM = 0`, `iMj = 0`
   (`src/.../Inhabited.lean:829`).
 
-### 2. The real Siegel pole is not explicitly proved
+### 2. No explicit unconditional proof found in the fixed archive
 
 The real `GlobalTheory.Published.SiegelEisensteinSimplePole` is defined at
 `src/.../SiegelEisensteinSimplePoleOfDoublingMethod.lean:14`.
 
-An exact-name search found no explicit unconditional theorem with that conclusion; it occurs as
-a hypothesis/field and in conditional theorems. This is not a proof that no indirect proof
-exists.
+In the fixed public archive, an exact-name search found no explicit unconditional theorem with
+that conclusion; it occurs as a hypothesis/field and in conditional theorems. This is a
+search-scope result, not a proof that no indirect proof exists.
 
 ### 3. Reachability is not necessity
 
@@ -91,18 +92,25 @@ itself show that the real Siegel-pole theorem is a necessary missing premise.
   kernel/comparator records support acceptance. We did not perform a local full kernel replay.
 - **Faithfulness/explanatory quality:** open. Degenerate internal definitions are a real
   quality concern; their semantic role is not fully established.
-- **The real Siegel pole:** unproved as an explicit named theorem in the public archive; exact
-  literature equivalence remains a specialist question.
+- **The real Siegel pole:** in the fixed public archive, no explicit unconditional theorem was
+  found by exact-name search; exact literature equivalence remains a specialist question.
 - **OpenAI quasi-RH:** different result; no evidence it covers this proposition.
 
 ## What would change our mind
 
-- A proof that the degenerate objects are semantically required by the final theorem (not just
-  syntactically reachable).
+Note: a proof that the degenerate objects are semantically required would affect **faithfulness**,
+not formal validity. A valid derivation of the correct final statement remains a formal proof
+even if its internal objects are degenerate; therefore “semantic necessity” is not listed as a
+validity criterion.
 - An explicit or indirect proof of the real `SiegelEisensteinSimplePole`, or a paper-level
   equivalence to a known theorem.
 - A formal defect in the final statement or kernel acceptance record.
 - Evidence that `Main.lean`’s `RiemannHypothesis` is not the standard Mathlib statement.
+
+## Scope
+
+The archive's stated target is the Riemann zeta function and Dirichlet L-functions (the GRH
+range used here), not arbitrary global or automorphic L-functions.
 
 ## Review questions
 

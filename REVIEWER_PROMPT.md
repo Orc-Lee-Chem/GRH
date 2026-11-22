@@ -107,7 +107,8 @@ Check OpenAI `openai/math` and any other recent public work:
 1. Is the final theorem formally valid? (cite evidence)
 2. Is it the standard RH statement?
 3. Are the degenerate definitions as quoted?
-4. Is the real Siegel pole explicitly proved in the public archive?
+4. In the fixed public archive, is there an explicit unconditional theorem proving the real
+   Siegel pole? If not, state the search scope and do not claim absolute non-existence.
 5. Is the proof term semantically dependent on the degenerate definitions? (state unresolved if
    not established)
 6. Does any recent work cover the missing proposition?

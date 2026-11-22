@@ -2,7 +2,7 @@
 
 **Status (2026-11-22):** We believe, with high confidence, that the Alpöge/Claude archive is a
 **formal proof of the standard Mathlib `RiemannHypothesis` statement**. We found degenerate
-internal definitions and an unproved named Siegel-pole proposition, but we have **not** shown
+internal definitions and, in the fixed archive, no explicit unconditional proof of the named Siegel-pole proposition, but we have **not** shown
 that they invalidate the final theorem. The earlier “the final theorem is vacuous / GRH is not
 proved” conclusion was too strong and has been retracted.
 
@@ -21,6 +21,12 @@ proved” conclusion was too strong and has been retracted.
   不是“形式证明无效”的证据。
 
 ---
+
+## Scope
+
+This audit covers the archive's stated target: the Riemann zeta function and Dirichlet
+L-functions (the GRH range used here). It does not claim a formalization of GRH for arbitrary
+global or automorphic L-functions.
 
 ## Bottom line
 
@@ -52,7 +58,7 @@ proved” conclusion was too strong and has been retracted.
 
 - **Source audit:** checked all 175,187 Lean modules for `sorry`, `axiom`, `native_decide`,
   `implemented_by`, `opaque`, `constant`, and the final statement.
-- **Proof-term graph:** read 175,179 `.olean` files, dumped 1,919,524 value edges, and ran BFS
+- **Proof-term graph:** read 175,179 `.olean` files, dumped 1,919,524 declaration-reference-list records (one record per declaration; each record lists the constants used in its value), and ran BFS
   from `rhOfAll`. The graph reaches 1,309,474 constants, including the degenerate definitions
   above.
 - **Independent records:** reviewed the public Lean community / comparator / kernel receipts
@@ -67,8 +73,8 @@ proved” conclusion was too strong and has been retracted.
 
 ## What remains uncertain
 
-- Whether the degenerate objects are semantically load-bearing in branches other than
-  `dm_of_two`.
+- How to interpret the degenerate objects in branches other than `dm_of_two`; semantic
+  dependence is a faithfulness question, not a validity criterion.
 - Whether the real `SiegelEisensteinSimplePole` has an indirect proof or exactly matches a
   published theorem.
 - Whether the formalization is a faithful/explanatory rendering of the intended mathematics.

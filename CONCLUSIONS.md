@@ -2,6 +2,12 @@
 
 Date: 2026-11-22
 
+## Scope
+
+The archive's stated target is the Riemann zeta function and Dirichlet L-functions (the GRH
+range used here). This is not a claim about GRH for arbitrary global or automorphic
+L-functions.
+
 ## Verdict
 
 **The formal proof is very likely correct. The earlier “vacuous / does not prove GRH”
@@ -66,19 +72,20 @@ So at least one path does not need the real Siegel-pole proposition.
 
 - **Formal validity:** high confidence. The final statement is the standard Mathlib RH statement,
   and independent checks support kernel acceptance. We do not claim a local full replay.
-- **Mathematical faithfulness:** still open. The degenerate definitions and the unproved named
-  Siegel proposition are a quality/explanation concern. They do not, by themselves, show the
-  final theorem is false or unproved.
-- **The real `SiegelEisensteinSimplePole`:** unproved as an explicit named theorem in the public
-  archive; its exact role and literature equivalence remain for specialist review.
+- **Mathematical faithfulness:** still open. The degenerate definitions and the absence of an explicit unconditional proof of the named
+  Siegel proposition in the fixed archive are a quality/explanation concern. They do not, by themselves, show the
+  final theorem is false or that the standard statement is not established.
+- **The real `SiegelEisensteinSimplePole`:** in the fixed public archive, an exact-name search
+  found no explicit unconditional theorem; this is a search-scope result, not a claim that no
+  proof exists. Its exact role and literature equivalence remain for specialist review.
 - **Recent work:** OpenAI’s 2026 quasi-RH work is a different result (zero-free region /
   Landau–Siegel), not this Siegel-pole statement. No public evidence was found that it fills this
   slot.
 
 ## One-sentence summary
 
-> We audited the archive, found degenerate internal definitions and a missing explicit
-> Siegel-pole proof, but did not find evidence that these invalidate the final standard RH
+> We audited the archive, found degenerate internal definitions and no explicit
+> unconditional Siegel-pole proof in the fixed archive, but did not find evidence that these invalidate the final standard RH
 > theorem. Our best judgment is that the formal proof is very likely correct; the remaining
 > issue is faithfulness/explanatory quality, not a demonstrated formal gap.
 
