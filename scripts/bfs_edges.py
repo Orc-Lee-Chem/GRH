@@ -1,8 +1,11 @@
-﻿import os, sqlite3, sys
+import os, sqlite3, sys
 from collections import deque
+from pathlib import Path
 
-tsv = r"E:\GRH-Lean-Check\edges.tsv"
-db = r"E:\GRH-Lean-Check\edges.db"
+root = Path(__file__).resolve().parent.parent
+tsv = Path(os.environ.get("GRH_EDGES_TSV", root / "edges.tsv"))
+db = Path(os.environ.get("GRH_EDGES_DB", root / "edges.db"))
+print(f"source tsv={tsv.name} db={db.name}", flush=True)
 targets = {
     "Formalism.L2.Geo.geoDegenerate",
     "Formalism.L2.Geo.divXFl",

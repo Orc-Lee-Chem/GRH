@@ -130,7 +130,7 @@ Therefore:
 
 - the cited literature theorems are **not** simply assumed without Lean checking;
 - but the formal objects they are applied to are **vacuous**;
-- the result is a valid Lean proof of a **vacuous/weakened variant**, not a proof of GRH.
+- The earlier “vacuous/weakened” conclusion is retracted; see current CONCLUSIONS.md.
 
 ## 6. Files
 

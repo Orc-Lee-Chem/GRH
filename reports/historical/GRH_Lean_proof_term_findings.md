@@ -13,7 +13,7 @@ the suspect placeholder definitions. In particular, a structure field typed as `
 headline proof, and `anyGeometry` / `geoDegenerate` / `divXFl` are on explicit proof-term paths from
 `rhOfAll`.
 
-So the theorem proved is **a vacuous/weakened variant**, not a non-vacuous formalization of GRH.
+The earlier “vacuous/weakened” conclusion is retracted; see current CONCLUSIONS.md.
 
 ## Method: proof-term graph, no imports
 
@@ -91,7 +91,7 @@ Path to `divXFl` / `geoDegenerate`:
 | `GlobalTheory.Mem.Top.Bl.anyGeometry` | `fun _ _ _ => True` | reached directly via `nonempty_hyps_definite_side_of_closed_bound` |
 | `Formalism.L2.Geo.geoDegenerate` | geometric fields `True`; `vol=0`; `H0=⊤` | reached via `divXFl` |
 | `Formalism.L2.Geo.divXFl` | `iMj=0`, `degM=0`, `CurveM=PUnit`, `geo=geoDegenerate` | reached via `geoOver_stages` |
-| `GlobalTheory.Mem.Top.DivRec.exists_divT` / `divEx_prov` | `rfl` / `trivial`; statements use `anyGeometry` | reached via `divEx_of_ox` / `geoOver_stages` |
+| `GlobalTheory.Mem.Top.DivRec.exists_divT` / `divEx_prov` | nontrivial constructions; `divEx_prov` calls `exists_divT`; statements use `anyGeometry` | reached via `divEx_of_ox` / `geoOver_stages` |
 
 ## What is and is not established
 
@@ -102,7 +102,7 @@ Path to `divXFl` / `geoDegenerate`:
 - **Not established:** that the intended mathematical objects (geometry, Siegel pole, etc.) are
   non-vacuous. They are not: the formalization replaces them with `True`/zero placeholders.
 - **Therefore:** this is not a proof of GRH in the ordinary mathematical sense. It is a proof of a
-  formally weakened statement whose key geometric hypotheses are vacuous.
+  The earlier “vacuous/weakened” conclusion is retracted; see current CONCLUSIONS.md.
 
 ## Local environment
 

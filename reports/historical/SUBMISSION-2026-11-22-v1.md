@@ -197,7 +197,7 @@ Results:
 
 - fields in `GeneralHyps.lean`, `BhattScholzeCrystallineLattices.lean`,
   `DiscreteSeriesCoefficientsCuspidal.lean`, `HypothesisBundleConversions.lean`;
-- `simplePole_iff` in `EisPoleLEZeroOfLt.lean:46` — **assumes** `Published.SiegelEisensteinSimplePole`;
+- `simplePole_iff` in `EisPoleLEZeroOfLt.lean:46` — proves an **equivalence**; its forward direction assumes `Published.SiegelEisensteinSimplePole`;
 - `eisRegularAt_one` in `EisPoleLEZeroOfLt.lean:58` — assumes it as a hypothesis;
 - conditional theorems `SiegelEisensteinSimplePole → ...`;
 - no unconditional theorem with conclusion `Published.SiegelEisensteinSimplePole`.
@@ -291,7 +291,7 @@ No geometric object; the predicate is always true.
 Key fields:
 
 ```lean
-Var := ℂ
+Var := ℕ
 Eff := fun _ _ => True
 H0 := fun _ _ => ⊤
 Cl := fun _ => PUnit
@@ -330,11 +330,9 @@ Curve moduli is a point, degree is zero, cycle map is zero.
 `src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/TupPinsOfMuIsW.lean:178,204`
 
 ```lean
-theorem exists_divT ... := rfl
-theorem divEx_prov ... := trivial
-```
-
-Their statements mention `anyGeometry`; their proofs are `rfl`/`trivial`.
+`exists_divT` constructs a witness and verifies several conditions. `divEx_prov` calls it
+through `StepW.of_all`; `trivial` solves only one component. Their statements mention
+`anyGeometry`, but the whole proofs are not `rfl`/`trivial`.
 
 ---
 
@@ -435,10 +433,10 @@ Nielsen preprint is not peer-reviewed). They agree with the source-level finding
   the kernel accepts the archive (community/independent checks).
 - **Mathematical content:** the proof term reaches `UnusedSlot72=True`,
   `anyGeometry=True`, `geoDegenerate`, `divXFl`, `exists_divT`, `divEx_prov`.
-- **The real `SiegelEisensteinSimplePole`:** defined but never proved; replaced by `True` in the
-  main bundle.
-- **Conclusion:** the archive proves a **vacuous/weakened** statement, not GRH. It is not a
-  Lean soundness bug; it is a specification/vacuity problem.
+- **The real `SiegelEisensteinSimplePole`:** in the fixed archive, no explicit unconditional
+  theorem was found; this is a search-scope result.
+- **Historical conclusion (retracted):** the earlier “vacuous/weakened” conclusion is withdrawn;
+  see `../../CONCLUSIONS.md`.
 
 ---
 

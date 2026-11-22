@@ -25,7 +25,7 @@ Source: `src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean:241`
 ```lean
 @[reducible] def geoDegenerate (F : Type) [Field F] [NumberField F] [StarRing F]
     (Tau : Type) [Fintype Tau] : DV.Geo F where
-  Var := ℂ
+  Var := ℕ
   dim := fun N => Formalism.DegreeFormula.dimFl Tau N
   Fn := fun _ => F
   ...
@@ -49,7 +49,7 @@ Source: `src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean:241`
 
 This is an instance of the `DV.Geo` interface with:
 
-- “variety” `Var := ℂ` (just a type, not an algebraic variety);
+- “variety” `Var := ℕ` (just a type, not an algebraic variety);
 - every effective divisor allowed (`Eff := True`);
 - `H0 := ⊤`;
 - class group `Cl := PUnit` (trivial);
@@ -112,12 +112,9 @@ It is the proposition `True`, proved by `trivial`. The name is a label for an em
 Source:
 `src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/TupPinsOfMuIsW.lean`
 
-```lean
-theorem exists_divT ... : ... := rfl
-theorem divEx_prov ... : ... := trivial
-```
-
-Their statements mention `anyGeometry`; their proofs are `rfl`/`trivial`.
+`exists_divT` constructs a witness and verifies several conditions. `divEx_prov` calls it
+through `StepW.of_all`; `trivial` solves only one component. Their statements mention
+`anyGeometry`, but the whole proofs are not `rfl`/`trivial`.
 
 **Interpretation:** these are not known existence theorems for divisors; they are immediate
 consequences of the degenerate definitions.
@@ -161,13 +158,11 @@ If one replaced `geoDegenerate`/`divXFl`/`anyGeometry` with genuine objects, the
 currently go through `trivial`, `rfl`, `Submodule.mem_top`, and `PUnit` would no longer work. That
 is exactly the sense in which the proof is hollow.
 
-## 8. Bottom line
+## 8. Historical bottom line (retracted)
 
-- **Known human theorem?** `UnusedSlot72`, `anyGeometry`, `geoDegenerate`, `divXFl`,
-  `exists_divT`, `divEx_prov` — **no**. They are placeholders/toy models.
-- **Known human theorem?** Many named literature fields — **partly yes**, but their formal
-  versions need individual comparison, and they are instantiated on the toy models.
-- **Does this prove GRH?** No. It proves a formally weakened statement with degenerate geometry.
+The earlier “this proves a formally weakened statement, not GRH” conclusion is retracted.
+See `../../CONCLUSIONS.md` for the current verdict: the final theorem is the standard Mathlib
+RH statement; the degenerate objects are a faithfulness concern, not a demonstrated formal gap.
 
 Files:
 - `E:\GRH-Lean-Check\GRH_literature_statements.md`

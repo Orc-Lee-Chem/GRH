@@ -56,8 +56,8 @@ No. A search for a theorem whose **conclusion** is `SiegelEisensteinSimplePole` 
 
 - fields of hypothesis structures (`GeneralHyps`, `BhattScholzeCrystallineLattices`, etc.);
 - conditional theorems of the form `SiegelEisensteinSimplePole → ...`;
-- `simplePole_iff`, which **assumes** `Published.SiegelEisensteinSimplePole` and proves an
-  equivalent form;
+- `simplePole_iff`, which proves an **equivalence** characterization; its forward direction
+  assumes `Published.SiegelEisensteinSimplePole`.
 - `eisPoleLEZeroOfLt`, which proves order 0 for `2 * rank < b`, not order 1 for the full range.
 
 There is no unconditional theorem `... : Published.SiegelEisensteinSimplePole`.
@@ -119,7 +119,7 @@ That is an independent confirmation of the empty slot.
 4. Re-run the proof-term dependency check to confirm the final theorem uses the real
    propositions, not `True`/`PUnit`/`0`.
 
-Until then, the archive is a valid Lean proof of a **vacuous/weakened** statement, not a
+The earlier “vacuous/weakened” conclusion is retracted; see current CONCLUSIONS.md.
 proof of GRH.
 
 ## References
