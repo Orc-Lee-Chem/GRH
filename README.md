@@ -1,80 +1,96 @@
-> **CORRECTION (2026-11-22):** An independent review found real errors in the earlier submission and showed that the earlier "final theorem is vacuous / does not prove GRH" conclusion was too strong. See [CORRECTION.md](CORRECTION.md). The formal proof of the standard `RiemannHypothesis` stands; the degenerate definitions are an internal/faithfulness issue, not by themselves a formal-validity disproof.
+# GRH Lean audit: what we did and what we believe
 
-> **Follow-up verification package (2026-11-22):** [Conclusions / 中文结论](reviews/2026-11-22/CONCLUSIONS.md), [local checks, Nielsen PDF review, scripts and receipts](reviews/2026-11-22/README.md), and [downloadable ZIP](bundles/GRH-review-2026-11-22.zip). The available evidence strongly supports the fixed Mathlib RH statement. The local checks are targeted; full-proof verification is attributed to the linked external records.
+**Status (2026-11-22):** We believe, with high confidence, that the Alpöge/Claude archive is a
+**formal proof of the standard Mathlib `RiemannHypothesis` statement**. We found degenerate
+internal definitions and an unproved named Siegel-pole proposition, but we have **not** shown
+that they invalidate the final theorem. The earlier “the final theorem is vacuous / GRH is not
+proved” conclusion was too strong and has been retracted.
 
-# GRH Lean audit materials
+---
 
-This repository contains an independent audit of the Alpöge/Claude Lean 4 formalization of the
-Riemann hypothesis. It is **not** the official archive and **not** a claim that Lean is unsound.
+## 中文摘要
 
-## Main finding
+- **我们做了什么：** 对 Alpöge/Claude 的 Lean 4 GRH archive 做了源码审计、证明项依赖图分析、
+  独立 kernel/comparator 记录核对，以及 Siegel 极点文献和 OpenAI 近期工作的检索。
+- **我们的判断：** 最终定理是标准 Mathlib `RiemannHypothesis`，不是本地 `True` 命题；没有发现
+  `sorry`、额外公理或 kernel 漏洞；独立检查支持它通过。**这份形式证明大概率是对的。**
+- **我们发现的瑕疵：** 内部有 `UnusedSlot72 := True`、`anyGeometry := True`、退化的
+  `geoDegenerate`/`divXFl`；真正的 `SiegelEisensteinSimplePole` 只有定义，没有找到显式无条件证明。
+- **但这些瑕疵目前不足以推翻最终定理：** 它们是否语义上“承重”尚未建立；至少
+  `ResidueKilled.dm_of_two` 会直接忽略 `True` 参数。更准确地说，这是**忠实性/解释性**问题，
+  不是“形式证明无效”的证据。
 
-The Lean proof is kernel-valid (community/independent checks), but the proof term reaches
-vacuous/degenerate definitions:
+---
 
-- `GlobalTheory.Published.UnusedSlot72 := True`
-- `GlobalTheory.Mem.Top.Bl.anyGeometry := fun _ _ _ => True`
-- `Formalism.L2.Geo.geoDegenerate` — `vol = 0`, `Cl = PUnit`, all geometric predicates `True`
-- `Formalism.L2.Geo.divXFl` — `CurveM = PUnit`, `degM = 0`, `iMj = 0`
+## Bottom line
 
-The real `GlobalTheory.Published.SiegelEisensteinSimplePole` is defined in the archive. An
-exact-name source search found no explicit unconditional theorem proving it; equivalent
-reformulations and a full environment search remain unverified. The main bundle's similarly
-named field has type `UnusedSlot72`; this has not been shown to be a necessary missing premise
-of the final RH theorem.
+1. `src/Main.lean` proves the actual Mathlib statement:
 
-More precisely:
+   ```lean
+   theorem riemannHypothesis : RiemannHypothesis := rhOfAll
+   ```
 
-- No explicit unconditional theorem with that named conclusion was found in the source search;
-  this is not a proof that no equivalent or indirect derivation exists.
-- The main bundle uses `UnusedSlot72` for that field.
-- A proof-term BFS from `rhOfAll` reaches `UnusedSlot72`, `siegel_eisenstein_simple_pole`,
-  `anyGeometry`, `geoDegenerate`, `divXFl`, `exists_divT`, `divEx_prov`.
+2. The archive has no `sorry`, `axiom`, `native_decide`, `implemented_by` or extra axiom in the
+   audited source; independent kernel/comparator records report acceptance with only
+   `propext`, `Classical.choice`, `Quot.sound`.
 
-## Files
+3. The proof term does contain degenerate/internal definitions:
+   - `GlobalTheory.Published.UnusedSlot72 := True`
+   - `GlobalTheory.Mem.Top.Bl.anyGeometry := fun _ _ _ => True`
+   - `Formalism.L2.Geo.geoDegenerate` — `vol = 0`, `Cl = PUnit`, many fields `True`
+   - `Formalism.L2.Geo.divXFl` — `CurveM = PUnit`, `degM = 0`, `iMj = 0`
 
-- `SUBMISSION.md` — full self-contained review submission.
-- `REVIEWER_PROMPT.md` — prompt for an independent reviewer (requires repository/web access
-  for `verified` claims).
-- `reports/GRH_Lean_proof_term_findings.md` — proof-term BFS findings.
-- `reports/GRH_literature_statements.md` — restored literature statements/classification.
-- `reports/GRH_vacuous_objects.md` — restored vacuous objects.
-- `reports/GRH_siegel_pole_and_recent_work.md` — real Siegel-pole proposition and recent work.
-- `reports/REPORT.md` — original source-level audit.
-- `evidence/` — source excerpts for every key claim.
-- `logs/` — raw BFS and scan logs.
-- `scripts/` — `DumpEdges.lean`, `InspectOlean.lean`, `bfs_edges.py`, `Check.lean`.
+4. The real `GlobalTheory.Published.SiegelEisensteinSimplePole` is defined in the archive, but an
+   exact-name source search found no explicit unconditional theorem proving it. This is a
+   **search result**, not a proof that no indirect/equivariant proof exists.
 
-## Reproduction
+5. These findings are not enough to show the final theorem is vacuous. The path through
+   `dm_of_two` accepts a `True` argument and ignores it; reachability in a proof term is not the
+   same as semantic necessity.
 
-The full repository is large (about 1 GB source; cache about 100 GB), so it is not included here.
-See `SUBMISSION.md` for the exact Alpöge/Claude archive and mirror links.
+## What we did
 
-Minimal proof-term reproduction (given the archive and `.olean` files):
+- **Source audit:** checked all 175,187 Lean modules for `sorry`, `axiom`, `native_decide`,
+  `implemented_by`, `opaque`, `constant`, and the final statement.
+- **Proof-term graph:** read 175,179 `.olean` files, dumped 1,919,524 value edges, and ran BFS
+  from `rhOfAll`. The graph reaches 1,309,474 constants, including the degenerate definitions
+  above.
+- **Independent records:** reviewed the public Lean community / comparator / kernel receipts
+  (Sutherland audit, `con-leche`, `con-ron`, community statement matching).
+- **Literature search:** checked Tan (1999), Kudla–Rallis/doubling method, Gan–Qiu–Takeda for
+  the real Siegel-pole statement.
+- **Recent work:** checked OpenAI’s 2026 `openai/math` quasi-RH release; it is a different
+  analytic-number-theory result (zero-free region / Landau–Siegel), not this Siegel-pole
+  proposition.
+- **Local targeted checks:** the follow-up package contains control tests, cache-archive checks,
+  and proof-reference extractions; it does **not** contain a full local RH replay.
 
-```powershell
-lake env lean --run scripts/DumpEdges.lean `
-  olean_list.txt edges.tsv
-python scripts/bfs_edges.py
-Get-Content logs/bfs2.log
-```
+## What remains uncertain
 
-`edges.tsv` and `edges.db` are multi-GB and are not included.
+- Whether the degenerate objects are semantically load-bearing in branches other than
+  `dm_of_two`.
+- Whether the real `SiegelEisensteinSimplePole` has an indirect proof or exactly matches a
+  published theorem.
+- Whether the formalization is a faithful/explanatory rendering of the intended mathematics.
+- Full independent kernel replay on this machine; we rely on the cited external checks.
 
-## Integrity
+## Repository map
 
-See `SHA256SUMS.txt`. The hashes refer to Git blob bytes, as supplied in GitHub source archives.
-Windows checkouts may convert older files to CRLF. Verify the committed bytes with:
+- `CONCLUSIONS.md` — concise verdict and evidence map (start here).
+- `SUBMISSION.md` — reviewer brief with exact paths and claims.
+- `REVIEWER_PROMPT.md` — prompt for an independent GPT/human review.
+- `reviews/2026-11-22/` — follow-up local checks, Nielsen PDF review, receipts, ZIP.
+- `evidence/` — source excerpts for the key definitions.
+- `logs/` — BFS and scan logs.
+- `scripts/` — `DumpEdges.lean`, `InspectOlean.lean`, `bfs_edges.py`, `Check.lean`,
+  `verify_repository_hashes.py`.
+- `reports/historical/` — earlier, more alarmist reports, kept for transparency but superseded.
+
+## Verify
 
 ```powershell
 python scripts/verify_repository_hashes.py
 ```
 
-The follow-up ZIP also contains its own `MANIFEST.sha256` for the extracted package files.
-
-## Caveat
-
-- Kernel acceptance is taken from the community/independent checks cited in `SUBMISSION.md`;
-  this repository does not contain a full local kernel replay.
-- The exact paper-level equivalence of the real `SiegelEisensteinSimplePole` with known
-  literature (Tan 1999, Kudla–Rallis) is marked for specialist review, not certified here.
+The full source archive and cache are not included (about 1 GB source, about 100 GB cache).
+See `SUBMISSION.md` for archive links and reproduction commands.

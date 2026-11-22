@@ -1,158 +1,119 @@
-# FINAL REVIEW PROMPT — copy this to GPT
+# Reviewer prompt (current version)
 
-You are an independent reviewer of a Lean 4 formalization. Your job is **not** to agree with
-me. Your job is to verify or refute the claims in `GRH_Lean_audit_submission.md` against the
-original repository and the mathematical literature.
+You are an independent reviewer of a Lean 4 formalization. Do not simply agree with the
+repository; verify the claims against the original source and, where possible, the literature.
+
+## Context
+
+The repository under review is an audit of the Alpöge/Claude Lean 4 formalization of the
+Riemann hypothesis. The current position is:
+
+- the final theorem is the standard Mathlib `RiemannHypothesis`;
+- the formal proof is very likely correct;
+- degenerate internal definitions exist, but have not been shown to invalidate the final theorem;
+- the real `SiegelEisensteinSimplePole` is defined but has no explicit unconditional proof in
+  the public archive;
+- earlier “vacuous / does not prove GRH” claims were retracted.
+
+Your job is to check this position, not to defend it.
 
 ## Rules
 
-1. **Do not use my excerpts as independent evidence.** Open the original repository or raw
-   files and quote the actual source line.
-2. If you have no browser/repository/terminal tool, say so at the start. Mark claims that
-   depend on repository access as `unresolved (no repository access)`. Do not pretend to have
-   checked them.
-3. A claim is `verified` only if you give: URL or commit, file path, line number, and the
-   exact quoted source (or exact command output). Otherwise it is `unresolved`.
-4. Do not mark “there is no proof” merely because one search failed. Distinguish:
-   - “not found in this public archive after a full exact-conclusion search”;
+1. If you have repository/browser access, use it. If not, say so and mark repository-dependent
+   claims `unresolved`.
+2. A claim is `verified` only with URL/commit + file path + line number + exact quote (or exact
+   command output).
+3. Do not mark “no proof exists” from one failed search; distinguish:
+   - “no explicit proof found in this public archive”;
    - “no proof exists anywhere”.
-5. Distinguish **Lean kernel validity** from **mathematical non-vacuity**. A proof can be
-   kernel-valid and still prove a vacuous statement.
-6. Do not claim the real Siegel-pole proposition is “known” without comparing the exact Lean
-   statement to a cited theorem. If unsure, mark `unresolved`.
+4. Distinguish **Lean kernel validity** from **mathematical faithfulness**.
+5. Do not assume that a constant reachable in a proof term is semantically necessary. Check
+   whether it is actually used or ignored.
 
 ## Material
 
-- Submission: `GRH_Lean_audit_submission.md` (claims + source excerpts + BFS paths)
-- Repository mirror: <https://github.com/CocoSgt/riemann-hypothesis-lean>
-- Comparator copy: <https://github.com/leanprover-community/riemann-hypothesis>
+- Repository: <https://github.com/Orc-Lee-Chem/GRH>
+- Audited source mirror: <https://github.com/CocoSgt/riemann-hypothesis-lean>
+- Source commit: `7cbf7a0c32fca1badf05931879a37c3f8a2b03b4`
 - Alpöge archive: <https://alpo.ge/lean.tar.gz.part01> … `.part14`
-- Source commit audited: `7cbf7a0c32fca1badf05931879a37c3f8a2b03b4`
-
-If you can clone:
-
-```bash
-git clone https://github.com/CocoSgt/riemann-hypothesis-lean
-cd riemann-hypothesis-lean
-git checkout 7cbf7a0c32fca1badf05931879a37c3f8a2b03b4
-```
-
-If you cannot clone, use GitHub’s code search or raw URLs and say which method you used.
+- OpenAI `math`: <https://github.com/openai/math>
 
 ## Tasks
 
-### A. Open the actual source
+### A. Final statement
 
-Verify these files and quote the relevant lines:
+Open `src/Main.lean` and verify:
 
-1. `src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/LocalTypeDictionary/DiscreteSpectrumResidualClassification.lean`
-2. `src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/BernsteinUnitaryProductIrreducible.lean`
-3. `src/Development/AutomorphicArithmetic/ThetaCorrespondence/ThetaPairLifts/ThirdPlaceSeries/EveryCharacterOfLiteratureOfVWin.lean`
-4. `src/Development/AbelianVarietyTheory/PublishedTheorems/SiegelWeil₂/SiegelEisensteinSimplePoleOfDoublingMethod.lean`
-5. `src/Development/AbelianVarietyTheory/PublishedTheorems/SiegelWeil₂/EisPoleLEZeroOfLt.lean`
-6. `src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean`
-7. `src/Development/AbelianVarietyTheory/Definitions/AutomorphicMembership/OverIx.lean`
-8. `src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/TupPinsOfMuIsW.lean`
-
-### B. Check the vacuous definitions
-
-For each, quote the definition and state whether it is a genuine object or a placeholder:
-
-- `GlobalTheory.Published.UnusedSlot72`
-- `GlobalTheory.Mem.Top.Bl.anyGeometry`
-- `Formalism.L2.Geo.geoDegenerate`
-- `Formalism.L2.Geo.divXFl`
-- `GlobalTheory.Mem.Top.DivRec.exists_divT`
-- `GlobalTheory.Mem.Top.DivRec.divEx_prov`
-
-### C. Check the real Siegel-pole proposition
-
-1. Quote the real `def GlobalTheory.Published.SiegelEisensteinSimplePole`.
-2. Parse it in ordinary mathematical language:
-   - what are `D`, `V`, `a`, `μ`, `b`, `φ`, `s₀`;
-   - what does `EisPoleLE ... 1` assert;
-   - at what point is the pole.
-3. Run an exact-conclusion search over **all** `.lean` files:
-
-```bash
-grep -RIn "SiegelEisensteinSimplePole" src
-grep -RInE "theorem .*:.*SiegelEisensteinSimplePole" src
+```lean
+theorem riemannHypothesis : RiemannHypothesis := rhOfAll
 ```
 
-4. Inspect every occurrence. State whether any unconditional theorem has conclusion
-   `SiegelEisensteinSimplePole`.
-5. Check `EisPoleLEZeroOfLt.lean`: does it prove the full order-1 statement, or only an
-   order-0 statement for `2 * rank < b`?
-6. Check whether the main bundle field is typed as the real proposition or as `UnusedSlot72`.
+State whether `RiemannHypothesis` is Mathlib’s standard RH statement or a local placeholder.
+Check the independent kernel/comparator records cited in `CONCLUSIONS.md`.
 
-### D. Check proof-term reachability
+### B. Degenerate definitions
 
-The submission claims a BFS over `.olean` value edges reaches these constants from `rhOfAll`:
+Quote and check:
 
-`UnusedSlot72`, `siegel_eisenstein_simple_pole`, `anyGeometry`, `geoDegenerate`, `divXFl`,
-`exists_divT`, `divEx_prov`.
+- `GlobalTheory.Published.UnusedSlot72` (`True`)
+- `GlobalTheory.Mem.Top.Bl.anyGeometry` (`fun _ _ _ => True`)
+- `Formalism.L2.Geo.geoDegenerate` (`vol = 0`, `Cl = PUnit`, many `True` fields)
+- `Formalism.L2.Geo.divXFl` (`CurveM = PUnit`, `degM = 0`, `iMj = 0`)
 
-Use the supplied `bfs2.log` as evidence, or reproduce with `DumpEdges.lean` / `bfs_edges.py`.
-State whether the paths support:
+### C. Real Siegel pole
 
-- “the constant is present in the transitive proof term”, and
-- “the final theorem needs a proof of it as an argument/field” (if you can determine that).
+1. Quote the real `def SiegelEisensteinSimplePole`.
+2. Explain its mathematical content.
+3. Search all `.lean` files for occurrences and for a theorem with this conclusion.
+4. Inspect `EisPoleLEZeroOfLt.lean`: what exactly does it prove, and what does it assume?
+5. Is the main bundle field typed as the real proposition or as `UnusedSlot72`?
 
-Do not overstate: presence in a structure value is not the same as being projected by the final
-theorem. Say which claim is supported and which is not.
+### D. Is it load-bearing?
 
-### E. Search the literature
+The repository claims a BFS from `rhOfAll` reaches the degenerate constants. Check the supplied
+`logs/bfs2.log` or reproduce with `scripts/DumpEdges.lean` / `scripts/bfs_edges.py`.
 
-Run web searches for:
+Then check the important distinction:
+
+- syntactic reachability;
+- semantic necessity.
+
+Inspect `ResidueKilled.dm_of_two` and state whether it ignores a `True` argument. If yes, say so:
+that undercuts “the real Siegel pole is a necessary missing premise”.
+
+### E. Literature
+
+Search:
 
 - `"SiegelEisensteinSimplePole"`
-- `"UnusedSlot72" Lean`
 - `Siegel Eisenstein series simple pole U(n,n)`
 - `Tan, Poles of Siegel Eisenstein Series on U(n,n)`
 - `Kudla Rallis doubling method Siegel Eisenstein pole`
 - `Gan Qiu Takeda regularized Siegel-Weil`
 
-Check at least:
+Question: is the exact Lean proposition a known theorem, a specialization, a stronger statement,
+or unresolved? Cite exact theorem/page if you claim known.
 
-- V. Tan, *Poles of Siegel Eisenstein Series on U(n,n)*, Canad. J. Math. 51 (1999).
-- Kudla–Rallis / doubling method (Kudla’s Park City notes).
-- Gan–Qiu–Takeda, regularized Siegel–Weil formula.
+### F. Recent work
 
-Question: is the exact Lean `SiegelEisensteinSimplePole` a known theorem, a specialization of a
-known theorem, a stronger statement, or unresolved? Give citations and explain.
+Check OpenAI `openai/math` and any other recent public work:
 
-### F. Check OpenAI and recent work
+- Does it prove this exact Siegel-pole proposition?
+- Does it fill `UnusedSlot72`?
+- Is the OpenAI quasi-RH result the same as GRH or this statement?
 
-Search:
+### G. Final answers
 
-- `openai/math`
-- `OpenAI quasi Riemann hypothesis`
-- `OpenAI 722 mathematics`
-- `SiegelEisensteinSimplePole OpenAI`
-- `Siegel Eisenstein simple pole Lean`
+1. Is the final theorem formally valid? (cite evidence)
+2. Is it the standard RH statement?
+3. Are the degenerate definitions as quoted?
+4. Is the real Siegel pole explicitly proved in the public archive?
+5. Is the proof term semantically dependent on the degenerate definitions? (state unresolved if
+   not established)
+6. Does any recent work cover the missing proposition?
+7. What is the correct overall verdict: formal validity, faithfulness, and remaining uncertainty?
 
-Questions:
-
-1. Does OpenAI’s 2026 `openai/math` release prove this exact proposition?
-2. Does it fill `UnusedSlot72`?
-3. Is its quasi-RH result the same as GRH or this Siegel-pole statement?
-4. Does any other recent public work prove the real proposition, or does the Alpöge/Claude
-   archive remain the only relevant formalization?
-
-### G. Final verdict
-
-Answer separately:
-
-1. Is the archive kernel-valid? (Cite independent reports; do not infer from my summary.)
-2. Is the formal theorem non-vacuous?
-3. Is the real `SiegelEisensteinSimplePole` proved in the public archive?
-4. Is the main proof term dependent on the vacuous definitions?
-5. Does any recent work (OpenAI or other) cover the missing proposition?
-6. If the real proposition is not proved, what would need to be added for a genuine GRH proof?
-
-## Required output
-
-Start with:
+## Output
 
 ```text
 Tools used: ...
@@ -160,8 +121,6 @@ Repository access: yes/no
 Web access: yes/no
 Commit/archive verified: ...
 ```
-
-Then:
 
 | Claim | Evidence (URL/commit/path/line/quote) | Verified? | Verdict |
 |---|---|---|---|
@@ -173,6 +132,4 @@ What I could not verify:
 ...
 ```
 
-Do not write “verified” without a URL/commit + path + line + quote. If you cannot access the
-repository, mark the repository-dependent claims `unresolved` and still answer what can be
-answered from the literature/web.
+Do not mark `verified` without exact evidence.
