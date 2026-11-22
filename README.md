@@ -1,3 +1,4 @@
+> **CORRECTION (2026-11-22):** An independent review found real errors in the earlier submission and showed that the earlier "final theorem is vacuous / does not prove GRH" conclusion was too strong. See [CORRECTION.md](CORRECTION.md). The formal proof of the standard `RiemannHypothesis` stands; the degenerate definitions are an internal/faithfulness issue, not by themselves a formal-validity disproof.
 # GRH Lean audit materials
 
 This repository contains an independent audit of the Alpöge/Claude Lean 4 formalization of the
