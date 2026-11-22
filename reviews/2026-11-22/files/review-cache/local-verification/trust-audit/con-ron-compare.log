@@ -1,0 +1,59 @@
+con-ron: reading challenge_canonical.ndjson
+con-ron: reading solution.ndjson
+con-ron: parse done: 1468418 fold records — the file's 1468418, 0 built-in prelude records synthesised; store 1065701044 expression, 21605 level, 14065181 name nodes t=359.975s (parse 359.975s)
+con-ron: checking: 1468418 declarations on 64 workers t=359.975s
+con-ron: check 146842 (10%) t=361.477s
+con-ron: check 293684 (20%) t=366.590s
+con-ron: check 440526 (30%) t=372.809s
+con-ron: check 587368 (40%) t=382.381s
+con-ron: check 734209 (50%) t=388.388s
+con-ron: check 881051 (60%) t=396.600s
+con-ron: check 1027893 (70%) t=402.333s
+con-ron: check 1174735 (80%) t=409.160s
+con-ron: check 1321577 (90%) t=417.731s
+con-ron: check 1468418 (100%) t=424.343s
+con-ron: check done: 1468418 declarations t=424.372s (check 64.397s)
+con-ron: done: parse 359.975s, check 64.397s, 64 workers t=424.372s
+con-ron: parse done: 51692 fold records — the file's 51692, 0 built-in prelude records synthesised; store 1065701044 expression, 21605 level, 14065181 name nodes t=425.225s (parse 425.225s)
+con-ron: checking: 51692 declarations on 64 workers t=425.225s
+con-ron: check 5170 (10%) t=425.238s
+con-ron: check 10339 (20%) t=425.251s
+con-ron: check 15508 (30%) t=425.262s
+con-ron: check 20677 (40%) t=425.278s
+con-ron: check 25846 (50%) t=425.298s
+con-ron: check 31016 (60%) t=425.317s
+con-ron: check 36185 (70%) t=425.340s
+con-ron: check 41354 (80%) t=425.372s
+con-ron: check 46523 (90%) t=425.401s
+con-ron: check 51692 (100%) t=425.497s
+con-ron: check done: 51692 declarations t=425.498s (check 0.273s)
+con-ron: done: parse 425.225s, check 0.273s, 64 workers t=425.498s
+con-ron: accepted 51692 declarations, 5 axioms justified by the solution solution.ndjson (1468418 declarations accepted) (--verified)
+con-ron: theorem riemannHypothesis justified by the solution
+con-ron: theorem riemannZeta_eq_zero_re justified by the solution
+con-ron: theorem LFunction_ne_zero_of_half_lt_re justified by the solution
+con-ron: theorem LFunction_eq_zero_re justified by the solution
+con-ron: theorem LFunction_eq_zero_re_of_isPrimitive justified by the solution
+	Command being timed: "/home/ubuntu/grh/ship/bin/con-ron-master --jobs=64 --progress=10% --compare challenge_canonical.ndjson solution.ndjson"
+	User time (seconds): 4462.98
+	System time (seconds): 26.82
+	Percent of CPU this job got: 1054%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 7:05.63
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 46726756
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 4852266
+	Voluntary context switches: 2364
+	Involuntary context switches: 6250
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 24
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -1,0 +1,104 @@
+[
+  {
+    "path": "src/Formalism/SharpRestriction/Divisibility/PlaceRankTwoOne.lean",
+    "sha256_lf": "b8b7203d9de3b51a96779c2a3970af6c589ce85387df26dbd13e9efc6d708329",
+    "ranges": [
+      {
+        "start": 95,
+        "end": 98,
+        "text": "95: def IsNV {D : D7} (X : DivX D) (j : ℕ) (c : X.Comp j) (τ : D.what₂.Tau)\n96:     (s : X.geo.Fn (X.Yv j c)) : Prop :=\n97:   s ≠ 0 ∧ s ∈ X.geo.H0 (X.Yv j c) (X.Lw j c (detW D τ)) ∧\n98:     s⁻¹ ∈ X.geo.H0 (X.Yv j c) (-(X.Lw j c (detW D τ)))"
+      },
+      {
+        "start": 123,
+        "end": 146,
+        "text": "123:   Comp_ne : ∀ j, 1 ≤ j → j ≤ D.R.m → Nonempty (X.Comp j)\n124: \n125:   PtF : ∀ j, X.Comp j → D.what₂.places.Pl → Type\n126:   PtF_ne : ∀ j, 1 ≤ j → j ≤ D.R.m → ∀ c w, Nonempty (PtF j c w)\n127:   pts_ne : ∀ j, 1 ≤ j → j ≤ D.R.m → ∀ c σ, Nonempty (X.geo.pts (X.Yv j c) σ)\n128: \n129:   vHT : ∀ j c, D.what₂.Tau → ∀ w, PtF j c w → ℚ\n130: \n131:   vSub : ∀ j c, D.what₂.Tau → ∀ w, PtF j c w → ℚ\n132: \n133:   vLie : ∀ j c, D.what₂.Tau → ∀ w, PtF j c w → ℚ\n134: \n135:   metH : ∀ j c τ σ, X.geo.Met (X.Yv j c) σ (X.Lw j c (detW D τ))\n136: \n137:   vF : ∀ j c, D.what₂.Tau → ∀ w, X.geo.Fn (X.Yv j c) → PtF j c w → ℝ\n138: \n139:   vF_smul : ∀ j, 1 ≤ j → j ≤ D.R.m → ∀ c τ w (a : D.what₂.LL) (f : X.geo.Fn (X.Yv j c)) y, a ≠ 0 → IsNV X j c τ f →\n140:     vF j c τ w (a • f) y = (vAdd (D.plEq w) a : ℝ) + vF j c τ w f y\n141: \n142:   degHH_def : ∀ j, 1 ≤ j → j ≤ D.R.m → ∀ c τ (s : X.geo.Fn (X.Yv j c)), IsNV X j c τ s →\n143:     ∀ (r : (D.what₂.LL →+* ℂ) → ℝ) (ρ : D.what₂.places.Pl → ℝ), (∀ σ, 0 < r σ) →\n144:       (∀ σ y, X.geo.pn (X.Yv j c) σ _ (metH j c τ σ) (X.geo.cx (X.Yv j c) σ s) y = r σ ^ 2) →\n145:       (∀ w y, vF j c τ w s y = ρ w) → (Function.support ρ).Finite →\n146:       X.degHH j c τ = degLine D r ρ"
+      },
+      {
+        "start": 349,
+        "end": 356,
+        "text": "349: theorem degree_value_of_determinant {D : D7} {large₂ : SizeData₂ D} {X : DivX D} {Lc : Loc D X} (h : PointsLemma D large₂ X Lc) : FrobeniusOrbitPlaceCount D large₂ X := by\n350:   intro j hj hj' c τ\n351:   exact (h j hj hj' c τ).2\n352: \n353: def Conclusion4 (C : ℝ) : Prop :=\n354:   ∀ u i (h : (D.fm u).KRat i), i + 1 ≤ D.R.m →\n355:     kLe D u i h (sumKer D large₂ u (i + 1) +\n356:       (D.R.f : ℝ) * D.R.N i * D.R.N (i + 1) * thMean D + errK D large₂ C u)"
+      }
+    ]
+  },
+  {
+    "path": "src/Formalism/LocalToGlobal/LatticeGeometry/Inhabited.lean",
+    "sha256_lf": "7a95297aa3205b6d5e033b4352eff0bb406b4cd11cb2e0fac5722c9b4aafde54",
+    "ranges": [
+      {
+        "start": 241,
+        "end": 306,
+        "text": "241: @[reducible] def geoDegenerate (F : Type) [Field F] [NumberField F] [StarRing F] (Tau : Type) [Fintype Tau] : DV.Geo F where\n242:   Var := ℕ\n243:   dim := fun N => Formalism.DegreeFormula.dimFl Tau N\n244:   Fn := fun _ => F\n245:   fnField := fun _ => inferInstanceAs (Field F)\n246:   fnAlg := fun _ => inferInstanceAs (Algebra F F)\n247:   Dv := fun N => Tau → Fin N → ℤ\n248:   dvGrp := fun _ => inferInstance\n249:   Eff := fun _ _ => True\n250:   eff_zero := fun _ => trivial\n251:   eff_add := fun _ _ _ _ _ => trivial\n252:   H0 := fun _ _ => ⊤\n253:   degreeZeroCohomology_finiteDimensional := fun _ _ => inferInstance\n254:   mul_mem_riemannRochSpace_add := fun _ _ _ _ _ _ _ => Submodule.mem_top\n255:   riemannRoch_mono := fun _ _ _ _ => le_refl _\n256:   KY := fun _ => 0\n257:   Cl := fun _ => PUnit\n258:   properCl := fun _ _ => True\n259:   subCl := fun _ _ _ => True\n260:   supp := fun _ _ => PUnit.unit\n261:   inter := fun N v => if h : 0 < Formalism.DegreeFormula.dimFl Tau N then flagDegZ Tau N (v ⟨0, h⟩) else flagDegZ Tau N 0\n262:   nef := fun _ _ => True\n263:   big := fun _ _ => True\n264:   bpf := fun _ _ _ => True\n265:   phiBir := fun _ _ _ => True\n266:   phiNoContr := fun _ _ _ _ => True\n267:   vanishOn := fun _ _ _ _ => True\n268:   hdim := fun _ _ _ => 0\n269:   pts := fun _ _ => PUnit\n270:   ptsMeas := fun _ _ => ⊤\n271:   vol := fun _ _ => 0\n272:   FnC := fun _ _ => ℂ\n273:   fnCRing := fun _ _ => inferInstanceAs (CommRing ℂ)\n274:   fnCAlg := fun _ _ => inferInstanceAs (Algebra ℂ ℂ)\n275:   cx := fun _ σ => σ\n276:   cx_smul := fun _ σ a f => by\n277:     show σ (a * f) = σ a * σ f\n278:     exact map_mul σ a f\n279:   Met := fun _ _ _ => PUnit\n280:   mAdd := fun _ _ _ _ _ _ => PUnit.unit\n281:   mPow := fun _ _ _ _ _ => PUnit.unit\n282:   fsMet := by intros; exact PUnit.unit\n283:   pn := fun _ _ _ _ _ _ => 0\n284:   pnK := fun _ _ _ _ _ _ => 0\n285:   mSmooth := fun _ _ _ _ => True\n286:   mPsh := fun _ _ _ _ _ => True\n287:   redZero := fun _ _ _ _ _ => True\n288:   agreeOn := fun _ _ _ _ _ _ => True\n289:   resNorm := by intros; exact 0\n290:   Adl := fun N => Tau → Fin N → ℤ\n291:   ofW := fun _ L _ _ => L\n292:   twist := fun _ L _ _ => L\n293:   arTop := fun _ _ => 0\n294:   arVol := fun _ _ => 0\n295:   nefA := fun _ _ => True\n296:   supInf := fun _ _ _ _ _ => 0\n297:   supFin := fun _ _ _ _ _ => 0\n298:   cutGood := by intros; exact True\n299:   cutHt := by intros; exact 0\n300:   cutOrd := by intros; exact 0\n301:   resFull := by intros; exact True\n302:   resDeg := by intros; exact 0\n303:   supInf_ofW := by intros; simp\n304:   supInf_twist := by intros; simp\n305:   supFin_twist := by intros; simp\n306:   regOn := fun _ _ _ _ _ => True"
+      },
+      {
+        "start": 829,
+        "end": 861,
+        "text": "829: def divXFl : DivX D :=\n830:   { X0 with\n831:     geo := geoDegenerate D.what₂.LL D.what₂.Tau\n832:     Lev := Unit\n833:     levPr := fun _ => Finset.univ.image D.host.g\n834:     shv := fun S _ => shimXFl D jC (recN D S) (recJ D S) (recJ_pos D S) (recJ_lt D S)\n835:     shv_N := fun S _ h => by show recN D S = _; unfold recN; rw [if_pos h]\n836:     shv_lev := fun _ _ => rfl\n837:     PlP := fun p _ => PlL D p\n838:     plpFin := fun p _ => finPl D p\n839:     plpNe := fun p _ => plL_ne D p\n840:     wtP := fun p _ => wtL D p\n841:     divisorWeight_nonneg := fun p _ => wtL_nonneg D p\n842:     divisorWeight_sum := fun p _ => wtL_sum D p\n843:     plP := fun p _ => Formalism.BasicNotions.Examples₂.PlOver.plLEquiv D p\n844:     divisorWeight_def := fun p _ la => Formalism.BasicNotions.Examples₂.PlOver.wtLog_eq D p la\n845:     jC := fun p _ => jC p\n846:     Mp := fun _ _ _ _ _ => PUnit\n847:     md := fun S _ p _ la _ => mdlJunk D p (jC p la) (recN D S) (recJ D S) (recJ_lt D S).le\n848:     phiFr_unram := fun _ _ _ _ _ _ => rfl\n849:     CurveM := fun _ _ _ _ _ _ => PUnit\n850:     degM := fun _ _ _ _ _ _ _ _ => 0\n851:     htMdl := fun _ _ _ _ _ => PUnit.unit\n852:     htCurve := fun _ _ _ _ => Equiv.refl _\n853:     htCurve_deg := fun _ _ _ _ _ => rfl\n854:     Comp := fun _ => PUnit\n855:     compFin := fun _ => inferInstance\n856:     degHH := fun _ _ _ => 0\n857:     Yv := fun j _ => (datW D () j).N\n858:     Ybd := fun _ _ => PUnit.unit\n859:     Lw := fun j _ => lwFl D j\n860:     iMj := fun j _ => (0 : (X0.MjH j).V →ₗ[D.what₂.LL] D.what₂.LL)\n861:     iMj_mem := fun _ _ _ => Submodule.mem_top }"
+      }
+    ]
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Proofs/IwasawaDecomposition/TupPinsOfMuIsW.lean",
+    "sha256_lf": "2680131c9999c7f44b5d30b410b7206e1d674f1b40165a7c58ec65700c708998",
+    "ranges": [
+      {
+        "start": 155,
+        "end": 166,
+        "text": "155: theorem geoOver_stages (X : Stages) (X₀ : DivX X.toD7) : GeoOver (fun _ => True) X₀ := by\n156:   let D := X.toD7\n157:   let eO : 𝓞 X.B.Ks ≃+* D.what₂.O := RingEquiv.refl _\n158:   let kL : X.B.Ks →+* D.what₂.LL := X.B.Ks.val.toRingHom\n159:   have hk : ∀ x : 𝓞 X.B.Ks, kL (x : X.B.Ks) = D.what₂.OtoLL (eO x) := fun _ => rfl\n160:   let jc : ∀ (p : ℕ) [Fact p.Prime], PlL D p → (DV.KW p →+* ℂ) :=\n161:     fun p _ la => Classical.choose (GlobalTheory.WittFracPlace.exists_jcPin D p la)\n162:   have hjc : ComplexEmbeddingsCompatible jc := GlobalTheory.ShFam.PinPlace.pinned_tiedFor D jc\n163:     (fun p _ la => Classical.choose_spec (GlobalTheory.WittFracPlace.exists_jcPin D p la))\n164:   refine ⟨divXFl D jc X₀, fun _ _ => True, ⟨divXFl D jc X₀, (divXFl D jc X₀).iMj, (divXFl D jc X₀).iMj_mem, rfl⟩,\n165:     ⟨famFlJ D jc X.B.Ks eO kL hk, fun p _ => Equiv.refl _, fun _ _ _ => Equiv.refl _, tiedX_fl D jc X₀, hjc,\n166:       fun _ _ _ _ _ => trivial, isoInv_famFlJ D jc X.B.Ks eO kL hk, levInTie_famFlJ D jc X.B.Ks eO kL hk⟩, trivial⟩"
+      },
+      {
+        "start": 178,
+        "end": 213,
+        "text": "178: theorem exists_divT {𝒮 : Slots} {K : Ctx} (w : ColW B f T) (pin : ColPin w) (Z : w.Lt) (l : Lv4 𝒮 K w Z) :\n179:     ∃ Y : DivX (w.D Z), Nonempty (DivT l.n Y) ∧ MjAre l.what₂.r.Z Y ∧ (∀ σ, Y.kapR σ = kapSharp (w.D Z)) ∧\n180:       LamAre l.what₂.r.Z Y := by\n181:   have hp : GlobalTheory.Mem.HD.TupPins l.n.tp := tupPins_of_muIsW (w.st Z) f T l.Wt w.I.xi l.what₂.mu l.n.tp l.n.xi\n182:   let X₁ := x0 l.what₂.r.Z l.what₂.r.z.pins l.what₂.r.intersectionNumber_baseChange\n183:   let X₂ := GlobalTheory.Mem.HD.ReQ.reQ l.n.tp hp w.I.sel pin.above X₁\n184:   obtain ⟨X, inK, ⟨Xg, iM, hiM, rfl⟩, hG, -⟩ := geoOver_stages (w.st Z) X₂\n185:   let c := GlobalTheory.Mem.HD.ReQ.reducedDivisorCharacter l.n.tp hp w.I.sel pin.above X₁\n186:   obtain ⟨h1, h2⟩ := GlobalTheory.Mem.HD.ReQ.reLoc l.n.tp hp w.I.sel pin.above X₁\n187:   let chr : DivisorCharacterCompatibility (w.D Z) (TC.cf w.I w.l Z) _ l.n.tp (GlobalTheory.GeoGraft.graft Xg X₂ iM hiM) := ⟨c.Qp_iff, c.eQPl, c.qv_eq⟩\n188:   refine ⟨GlobalTheory.GeoGraft.graft Xg X₂ iM hiM,\n189:     ⟨{ Qp := qpIs_qpSet w pin Z l.n.tp l.n.xi hp, chr := chr, loc := ⟨h1, ?_⟩, inK := inK, geo := hG }⟩,\n190:     GlobalTheory.Mem.R3.exists_mjHTie l.what₂.r.Z _ rfl HEq.rfl, fun _ => rfl,\n191:     lamAre_of_eq l.what₂.r.Z l.what₂.r.intersectionNumber_baseChange _ rfl⟩\n192:   exact ⟨h2.qv_eq, h2.deg1, h2.ram, h2.off_g, h2.nu_eq, h2.typeDim_eq, h2.ZQ_eq, h2.quotientLocalValueFirst_eq⟩\n193: \n194: theorem lamAre_x0 {K : Ctx} {w : ColW B f T} {Z : w.Lt} {Wt : Set B.places.Pl} {p0 : BaseLevelRowSide (w.D Z)} (t : RowsT K w Z Wt p0) :\n195:     LamAre t.r.Z (x0 t.r.Z t.r.z.pins t.r.intersectionNumber_baseChange) :=\n196:   lamAre_of_eq t.r.Z t.r.intersectionNumber_baseChange _ rfl\n197: \n198: theorem lamAre_heq {K : Ctx} {w : ColW B f T} {Z : w.Lt} {Wt : Set B.places.Pl} {p0 p0' : BaseLevelRowSide (w.D Z)} {t : RowsT K w Z Wt p0}\n199:     {t' : RowsT K w Z Wt p0'} (e : p0 = p0') (h : HEq t t') {X : DivX (w.D Z)} (hX : LamAre t'.r.Z X) : LamAre t.r.Z X := by\n200:   subst e\n201:   obtain rfl := eq_of_heq h\n202:   exact hX\n203: \n204: theorem divEx_prov (𝒮 : Slots) (hOx : 𝒮.Ox = OX anyGeometry) : DivEx 𝒮 :=\n205:   StepW.of_all fun _ _ _ _ w _ _ hpin Z l =>\n206:     let ⟨Y, h1, h2, h3, h4⟩ := exists_divT w hpin.some Z l\n207:     ⟨Y, h1, h2, h3, fun O t hX hp ht => by\n208:       rw [hOx]\n209:       exact ⟨⟨trivial, lamAre_heq hp ht (hX ▸ h4)⟩⟩⟩\n210: \n211: theorem divEx_of_ox : GlobalTheory.NT.RayField → GlobalTheory.Published.PrincipalIdealSt → GlobalTheory.Published.CMCurveGoodOutsidePrimeSt → ∀ 𝒮 : Slots,\n212:     𝒮.Ox = OX anyGeometry → DivEx 𝒮 :=\n213:   fun _ _ _ 𝒮 hOx => divEx_prov 𝒮 hOx"
+      }
+    ]
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/SetUnipotentTranslate.lean",
+    "sha256_lf": "52560bbc51e012b706fc6838bfa75eb15f2cf05f7e6f9ccde98d2d8b5c5c60df",
+    "ranges": [
+      {
+        "start": 25,
+        "end": 31,
+        "text": "25: @[reducible] def setDiv (D : D7) (N : ∀ u, Submodule (𝓞 D.what₂.LL) (D.div.Nu u).V) (h : D.what₂.Word → ℝ) : D7 :=\n26:   { D with\n27:     div := { D.div with\n28:       Nu := fun u => { D.div.Nu u with L := N u }\n29:       h := h\n30:       HH := max 1 (sFrame (fun u => { D.div.Nu u with L := N u }) h + D.div.RR.muMax)\n31:       HH_ge := le_max_right _ _ } }"
+      },
+      {
+        "start": 379,
+        "end": 401,
+        "text": "379: def ht : D.what₂.Word → ℝ := DV.hExpl6 D p.L Y.X C.Csz\n380: \n381: def pt : Pt C where\n382:   D := setDiv D (nPrime p.L) p.ht\n383:   L := ledTr (nPrime p.L) p.ht p.L\n384:   gatT := gatTr (nPrime p.L) p.ht Y.gatT\n385:   ta :=\n386:     { Gx := instTr (nPrime p.L) p.ht p.ta.Gx\n387:       Gy := latTr (nPrime p.L) p.ht Y.Gy\n388:       supp_sat := p.ta.supp_sat\n389:       tw_supp := p.ta.tw_supp\n390:       fills := fun w => fills_tr (D := D) (nPrime p.L) p.ht p.ta.Gx C.GK w (p.ta.fills w)\n391:       lats0 := fun w u h1 h2 => p.ta.lats0 w u (by rw [← VV_tr (nPrime p.L) p.ht]; exact h1) h2\n392:       latTied := (p.Gy_eq ▸ p.ta.latTied : G.LatTied Y.gatT p.ta.Gx Y.Gy)\n393:       drop_iff := p.ta.drop_iff }\n394:   xa :=\n395:     { ties := { Y.ties with }\n396:       X := divTr (nPrime p.L) p.ht Y.X\n397:       nuDef := p.nuDef\n398:       nprimeDef := fun _ => rfl\n399:       rrDef := Y.rrDef\n400:       h_eq := fun _ => rfl\n401:       ex := extraTr (nPrime p.L) p.ht p.extra }"
+      }
+    ]
+  },
+  {
+    "path": "src/Formalism/LocalRingCardinality/KernelPlaceMeanBound.lean",
+    "sha256_lf": "22fdce18696511899e2818b3ea8b2868f97cb810b02b8f9b1fc1cbbd98f120af",
+    "ranges": [
+      {
+        "start": 20,
+        "end": 29,
+        "text": "20: def kernelPlaceMeanBound (D : D7) (L : SizeData₂ D) (C : ℝ) (u : D.what₂.Word) (j : ℕ) : ℝ :=\n21:   (∑ ρ : D.what₂.Tau, kerPlace D L u j ρ) +\n22:     C * (D.R.f : ℝ) * (D.R.N D.R.m : ℝ) ^ 2 * L.La +\n23:     C * (D.R.f : ℝ) * (D.R.m : ℝ) ^ 3 * (D.R.N D.R.m : ℝ) ^ 2 * L.sc.L\n24: \n25: def hExpl6 (D : D7) (L : SizeData₂ D) (X : DivX D) (C : ℝ) (u : D.what₂.Word) : ℝ :=\n26:   SZbP D L C u + (∑ j ∈ SizeData₂.lifts D, kernelPlaceMeanBound D L C u j) - (∑ j ∈ SizeData₂.lifts D, L6lo D L C j) -\n27:     meanE D (fun e => Real.log (X.kapR e))\n28: \n29: end Formalism.BasicNotions.DV"
+      }
+    ]
+  },
+  {
+    "path": "src/Formalism/SharpRestriction/Divisibility/SlopeExcess/HeightBoundOfComponentBounds.lean",
+    "sha256_lf": "bf6d55dfada2a351506e19218a687137472b8e0d553e59c7db471590c9faa033",
+    "ranges": [
+      {
+        "start": 136,
+        "end": 150,
+        "text": "136: theorem height_bound_of_component_bounds {eps : ℝ} (Fm : FamP eps) (CH : ℝ) (Eb Ec CF0 : List ℝ → ℝ)\n137:     (hL : Fm.Large (thrHH Eb Ec CF0) CH)\n138:     (h4 : Formalism.MainNotions.LocalQuadraticParts.SlopeLemmaFamily Fm) (hrk : Formalism.MainNotions.J.MuRank Fm)\n139:     (hfull : ∃ x0 : ℝ, ∀ x ≥ x0, ∀ i : Fm.Ix x, (Fm.D x i).NuFull)\n140:     (hb : ∃ x0 : ℝ, ∀ x ≥ x0, Fm.x1 < x → ∀ (i : Fm.Ix x) u,\n141:       (((Fm.D x i).fm u).lat 0).muMax ≤ (Fm.L x i).sc.x ^ Eb Fm.cOut * (Fm.L x i).sc.b)\n142:     (hc : ∃ x0 : ℝ, ∀ x ≥ x0, Fm.x1 < x → ∀ (i : Fm.Ix x) u,\n143:       (Fm.L x i).Ga + (Fm.L x i).Fo - (Fm.L x i).Ee u ≤ (Fm.L x i).sc.x ^ Ec Fm.cOut * (Fm.L x i).sc.b)\n144:     (hTu : TuSize Fm)\n145:     (he : ∃ x0 : ℝ, ∀ x ≥ x0, ∀ (_ : Fm.x1 < x) (i : Fm.Ix x),\n146:       (Fm.D x i).div.RR.muMax + meanE (Fm.D x i) (fun e => Real.log ((Fm.X x i).kapR e)) ≤\n147:         (Fm.L x i).sc.x ^ CF0 Fm.cOut * (Fm.L x i).sc.b) :\n148:     Formalism.MainNotions.LocalQuadraticParts.FrameNumberBoundFamily Fm Fm.Csz CH :=\n149:   height_bound_of_slope_fullness Fm CH h4 hrk hfull\n150:     (hhRest_of_parts Fm CH Eb Ec CF0 (hL.2.2.1 CH List.mem_cons_self) hb hc hTu he)"
+      }
+    ]
+  },
+  {
+    "path": "src/Formalism/LocalToGlobal/Divisibility/RecBridge.lean",
+    "sha256_lf": "ba20a46a7a5132ecd646b85dfd4ec4df838e818543083930b34d2a11533e962b",
+    "ranges": [
+      {
+        "start": 120,
+        "end": 141,
+        "text": "120:   field_simp\n121: \n122: end Kap\n123: \n124: section Word\n125: \n126: open Formalism.BasicNotions\n127: \n128: def WordFacts {D : D7} (L : SizeData₂ D) (C Cabs : ℝ) (u : D.what₂.Word) : Prop :=\n129:   (D.div.Nu u).L.map ((D.div.Bk u).restrictScalars (𝓞 D.what₂.LL)) ≤ D.div.cc ∧\n130:   (D.div.Bk u ≠ 0 → Formalism.HN.htMap (D.div.Nu u).b (D.div.Nu u).X D.div.RR.dualB D.div.RR.dualX (D.div.Bk u) ≤\n131:     D.div.h u) ∧\n132:   D.div.RR.muDual + D.div.h u - L.Fo ≤ L.MAIN u +\n133:     C * (D.host.TT.card : ℝ) * L.sc.a * L.La + C * (D.R.m : ℝ) * (L.B0 + L.Nc) * L.sc.x ^ (Cabs * L.sc.eps)\n134: \n135: theorem wordFacts_of {D : D7} (L : SizeData₂ D) (C Cabs : ℝ) (u : D.what₂.Word) {d n : ℕ}\n136:     (Nc : Submodule (𝓞 D.what₂.LL) (Fin d → D.what₂.LL)) (Rc : Submodule (𝓞 D.what₂.LL) (Fin n → D.what₂.LL))\n137:     (eN : (Fin d → D.what₂.LL) ≃ₗ[D.what₂.LL] (D.div.Nu u).V) (eR : (Fin n → D.what₂.LL) ≃ₗ[D.what₂.LL] D.div.RR.V)\n138:     (hN : (D.div.Nu u).L = Nc.map ((eN : (Fin d → D.what₂.LL) →ₗ[D.what₂.LL] (D.div.Nu u).V).restrictScalars (𝓞 D.what₂.LL)))\n139:     (hR : D.div.RR.L = Rc.map ((eR : (Fin n → D.what₂.LL) →ₗ[D.what₂.LL] D.div.RR.V).restrictScalars (𝓞 D.what₂.LL)))\n140:     (B : (Fin d → D.what₂.LL) →ₗ[D.what₂.LL] Module.Dual D.what₂.LL (Fin n → D.what₂.LL))\n141:     (hB : ∀ x y, D.div.Bk u (eN x) (eR y) = B x y)"
+      }
+    ]
+  }
+]

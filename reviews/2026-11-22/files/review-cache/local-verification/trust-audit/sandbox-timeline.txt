@@ -1,0 +1,48 @@
+phase A start 2026-11-21T10:09:36Z on ip-172-31-65-247 (192 cores, AMD EPYC 9R45)
+Mathlib+deps oleans identical to clean reference (8322+378 files)
+pre-sandbox 'lake build Mathlib' (upstream only) exit=0 2026-11-21T10:09:47Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+0df444a360eaa60ab8c11dca51a86af692955474
+805ab4cc6a88dcef109644d201c3142261f524aecaf58b04913a9f029e21e9b5  /home/ubuntu/ref/lean4export
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T10:09:47Z
+continuing with LEAN_NUM_THREADS=96 2026-11-21T10:22:31Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 96 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T10:22:31Z
+continuing with LEAN_NUM_THREADS=64 2026-11-21T10:25:54Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 64 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T10:25:54Z
+continuing with LEAN_NUM_THREADS=64 cpus=0-95 2026-11-21T11:59:49Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 64 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T11:59:49Z
+continuing with LEAN_NUM_THREADS=40 cpus=0-47 2026-11-21T12:05:21Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 40 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T12:05:21Z
+continuing with LEAN_NUM_THREADS=96 cpus=0-95 2026-11-21T12:10:44Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 96 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T12:10:44Z
+continuing with LEAN_NUM_THREADS=64 cpus=0-95 2026-11-21T12:16:13Z
+sandbox: bwrap --unshare-all --die-with-parent --ro-bind / / --dev /dev --proc /proc --tmpfs /tmp --tmpfs /home/ubuntu --ro-bind /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1 --ro-bind /home/ubuntu/grh/src/lean /home/ubuntu/grh/src/lean --bind /home/ubuntu/grh/src/lean/.lake /home/ubuntu/grh/src/lean/.lake --ro-bind /home/ubuntu/ref /home/ubuntu/ref --bind /home/ubuntu/sbx_out /home/ubuntu/sbx_out --clearenv --setenv PATH /home/ubuntu/.elan/toolchains/leanprover--lean4---v4.33.1/bin:/usr/bin:/bin --setenv HOME /home/ubuntu --setenv LEAN_ABORT_ON_PANIC 1 --setenv LEAN_NUM_THREADS 64 --chdir /home/ubuntu/grh/src/lean
+inside sandbox: net=dumdum ens130 lo  ; can write source dir: no; home listing: grh ref sbx_out 
+network unreachable
+sandboxed lake build Main start 2026-11-21T12:16:13Z
+sandboxed lake build Main exit=0 2026-11-21T18:07:21Z
+sandboxed export start 2026-11-21T18:07:21Z
+sandboxed export exit=0 bytes=61570595788 2026-11-21T19:32:56Z
+5ea74b912147c5c93cc2b6d70cc727cf908df2f62ac6a20480a3fa02f6be244e  /home/ubuntu/sbx_out/solution.ndjson
+EXPORT SHA256 MATCHES the published export
+olean manifest: 175187 files, sha256 51319e37e06fd80dc16cdbe3380e13967603cc36d529389f835ca48076c24859
+olean files identical to published manifest: 175186 of 175187; differing: 1
+ALL DONE 2026-11-21T19:33:29Z

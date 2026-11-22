@@ -1,0 +1,7 @@
+{
+  "path": "${USER_PDF}",
+  "bytes": 158977,
+  "sha256": "8ed8649b46993126aad0cd15760a2f444efb3fc72a2ce01bc9c08a01073fc9b4",
+  "pages": 16,
+  "metadata": "{'/Creator': 'LaTeX with hyperref', '/Producer': 'xdvipdfmx (20220710)', '/CreationDate': \"D:20261121220440-06'00'\"}"
+}

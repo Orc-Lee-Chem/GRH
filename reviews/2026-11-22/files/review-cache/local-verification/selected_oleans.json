@@ -1,0 +1,258 @@
+[
+  {
+    "module": "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NotGeoClFalse",
+    "hash": "4ca4fd201cbf6705",
+    "archive": "6b865de155a728e8.ltar",
+    "sha256": "6632eb7474f88df2ef4a2da83df4c1db19763bd3d434b28b97e7c47db3268811",
+    "bytes": 6612,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/6b865de155a728e8.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.OverIx",
+    "hash": "27967dedbedc94cc",
+    "archive": "c335cc2213f1303b.ltar",
+    "sha256": "fcf047d9d2abaee27aed0278e2506470634aa7d5cc1f98e6728eba5f106ca00b",
+    "bytes": 15722,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/c335cc2213f1303b.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.SecondChernDegreeVanishesTrueSurfaces",
+    "hash": "5fa496d10ac85af0",
+    "archive": "b6fd454778e48e7d.ltar",
+    "sha256": "25915089d423b86c2fcd167ffbec1f172a2d15d342f5c73521a0fc221b0a51a6",
+    "bytes": 102018,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/b6fd454778e48e7d.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Definitions.GlobalTwisting.SetUnipotentTranslate",
+    "hash": "8194cee51fbfe890",
+    "archive": "16a049fec0d35d6e.ltar",
+    "sha256": "4344c14d801f5ad670f6049e22c172dca2fe644c4d87ab2a0df5df7167590976",
+    "bytes": 223044,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/16a049fec0d35d6e.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.RealTiedSetDiv",
+    "hash": "082b017a3699a112",
+    "archive": "ed6ecc6ed1683421.ltar",
+    "sha256": "e68725ce75664a6e7b77b5f16c9c185de61a22eebcfbadcefef58115d854e530",
+    "bytes": 7782,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/ed6ecc6ed1683421.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DivisionGeometryScalarsTransferSetDivision",
+    "hash": "74a106e7baf0ec4c",
+    "archive": "cda929bffe992d97.ltar",
+    "sha256": "44db41faa57253f94365351fdbfb95d4b1867ffc03cbe9b76f5dddcd22e12006",
+    "bytes": 101077,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/cda929bffe992d97.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PublishedInputsImplyConclusion",
+    "hash": "2b1d40f471556ce3",
+    "archive": "3dc36945dbd94506.ltar",
+    "sha256": "3de0c1040eabfb1d80760505fd01a8e4b672fee2b8de39c0bb5b05a167e5922f",
+    "bytes": 22986,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/3dc36945dbd94506.art"
+  },
+  {
+    "module": "Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TupPinsOfMuIsW",
+    "hash": "9a3dac68563d87cc",
+    "archive": "fdfba463aec1b28e.ltar",
+    "sha256": "1dfd55f9eb12c94107ed93e5a0d3591abcb2c1d4429aef6443fea727136eee1b",
+    "bytes": 51547,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/fdfba463aec1b28e.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.CharacterBoxes.MainConclusion",
+    "hash": "2ff5036f4019c623",
+    "archive": "ed92be4edcc2f046.ltar",
+    "sha256": "3a79258625e269a17d23a6b750e0544cc000498ee4b0d6faef23f640d3ae159b",
+    "bytes": 3194,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/ed92be4edcc2f046.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DiscreteSpectrumResidualClassification",
+    "hash": "cdcbe5abbb5c6238",
+    "archive": "7d01b75b775b2b56.ltar",
+    "sha256": "eb06a6876f4d5daec20739c549b89e203799af49ff4f5c79f5c0af6dcb482c2c",
+    "bytes": 2361,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/7d01b75b775b2b56.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.DoublingMethodOfEisensteinFacts",
+    "hash": "0c6b52d48c752111",
+    "archive": "4deba15a41116468.ltar",
+    "sha256": "2d646e7e5d5820a85192a4a096bfdc4a16855180f389fa3119d8e3bcc04af054",
+    "bytes": 2533,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/4deba15a41116468.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.LocalTypeDictionary.MemberHodgeHypOfLocalInputsRationalWeights",
+    "hash": "29c363467ddfea3c",
+    "archive": "188bff429430ba77.ltar",
+    "sha256": "9ee8dc38e60f5c54eaa19fddcf9f4dc4c736f32859b6717fcbe42564bda96eb0",
+    "bytes": 3923,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/188bff429430ba77.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.BernsteinUnitaryProductIrreducible",
+    "hash": "7ebbac9017726e09",
+    "archive": "9412faeeba24722a.ltar",
+    "sha256": "8b76937514cd1b1363e749c96fe9a17d9cba008fa58bc019c355ba0e26ef37a5",
+    "bytes": 9827,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/9412faeeba24722a.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.EveryCharacterOfLiteratureOfVWin",
+    "hash": "0f6849fff4d9b1d6",
+    "archive": "13241e8f67406bba.ltar",
+    "sha256": "f1e7178b9236bc47eb6843ac8c73e821a6aaf16bd80e30eb476c685f52bf6ef2",
+    "bytes": 50758,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/13241e8f67406bba.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.ExistsBaseLatticeOfPrime",
+    "hash": "ed69932b53beb5e9",
+    "archive": "73e96d7d977564c6.ltar",
+    "sha256": "06ddf2f4ee5f4d376f6ed554e4be2ce9cc951294e488147b3bdd254ec1259c51",
+    "bytes": 11831,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/73e96d7d977564c6.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.HypothesesNonemptyOfUnramifiedExponents",
+    "hash": "e956b0006d0cf453",
+    "archive": "e7d47a507b6f7a2e.ltar",
+    "sha256": "6426690a18ef51c5c8600b2de88ca21479370ad838a58b995d191355bfd33a03",
+    "bytes": 7638,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/e7d47a507b6f7a2e.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.MemberBundlesLargeUnramifiedExponents",
+    "hash": "dfd40f7af73c943d",
+    "archive": "4692fedac8724f84.ltar",
+    "sha256": "3ed98a1c59b52e684b29f0298cc21209f3e582a7d4d886ae3010d90f3f77c89a",
+    "bytes": 9174,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/4692fedac8724f84.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.MemberEClosing",
+    "hash": "9c533e02e4a1661a",
+    "archive": "9827e34642e46c29.ltar",
+    "sha256": "198f95ef4b7e10671d7444dfa51d7ecd53fee046eff20eded8b909bf262eeab7",
+    "bytes": 6944,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/9827e34642e46c29.art"
+  },
+  {
+    "module": "Development.AutomorphicArithmetic.ThetaCorrespondence.ThetaPairLifts.ThirdPlaceSeries.SiegelEisensteinSecondTermHypotheses",
+    "hash": "1fc7ef66aa6969f2",
+    "archive": "dfa8ab9515468d43.ltar",
+    "sha256": "7568d1ae299feaac175f78edf671594ec29720599f6226f966f05df9f6da1c47",
+    "bytes": 10148,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/dfa8ab9515468d43.art"
+  },
+  {
+    "module": "Development.WeilBound.RepresentationTheoryGL.EisensteinResidues.AnisotropicGlobalForms.DmOfHyp",
+    "hash": "e96e01f1fd53cd83",
+    "archive": "06a34193c409838b.ltar",
+    "sha256": "cc30df9acc4d1330997835ddd3fa7a8ff6767ee53bf24e3d31c60290dd2fb1df",
+    "bytes": 8756,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/06a34193c409838b.art"
+  },
+  {
+    "module": "Formalism.LocalRingCardinality.KernelPlaceMeanBound",
+    "hash": "d85390e6123aef24",
+    "archive": "90db9d430e22a5e7.ltar",
+    "sha256": "b8e37eafcdb860d48457de2a3cd569bf38875959bf312a7517e61e1ac33a7e31",
+    "bytes": 3739,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/90db9d430e22a5e7.art"
+  },
+  {
+    "module": "Formalism.LocalRingCardinality.SpanPowerMembership.NZRowD",
+    "hash": "87b2cb40e9fcc3df",
+    "archive": "581264690eabeaaf.ltar",
+    "sha256": "eba918ec9aabed5d9abfdec02b1e8b3b5fb31d0b504191b385626700303b12a3",
+    "bytes": 19461,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/581264690eabeaaf.art"
+  },
+  {
+    "module": "Formalism.LocalToGlobal.Divisibility.RecBridge",
+    "hash": "94f04032c60ab93c",
+    "archive": "55f32d7f1ad20e40.ltar",
+    "sha256": "96ad44147106014d1414849d6161eda4d279ae91166d8241c785e3ea9ea8f238",
+    "bytes": 267960,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/55f32d7f1ad20e40.art"
+  },
+  {
+    "module": "Formalism.LocalToGlobal.Divisibility.RecBridgeMkF",
+    "hash": "82136095c1c989c5",
+    "archive": "3d93da434a6d3f14.ltar",
+    "sha256": "379733e0ecc4b9b6093bd1914ccec3314f875f319e3e7c8491398579171b42e2",
+    "bytes": 11204,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/3d93da434a6d3f14.art"
+  },
+  {
+    "module": "Formalism.LocalToGlobal.LatticeGeometry.GeoTiedP",
+    "hash": "f0f5bf917a76684e",
+    "archive": "59af835af8365d69.ltar",
+    "sha256": "5e99b21a3a964d1ba5a8e75026d81b09be3679a0cbfc623a06c31f39d1fc0ca5",
+    "bytes": 35177,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/59af835af8365d69.art"
+  },
+  {
+    "module": "Formalism.LocalToGlobal.LatticeGeometry.Inhabited",
+    "hash": "713b0e20f76c07c2",
+    "archive": "9fa5c543f8a0a2f7.ltar",
+    "sha256": "57e9ca398f7f437bb54c1c94e564c908aaa05ee349a3d37ebbb9aa7f16e2be6b",
+    "bytes": 118974,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/9fa5c543f8a0a2f7.art"
+  },
+  {
+    "module": "Formalism.SharpRestriction.Divisibility.SlopeExcess.ConstRankBaseLePolyFourth",
+    "hash": "10b27e65112002f4",
+    "archive": "df58b958b69168e4.ltar",
+    "sha256": "e7b13362acd541d423d4a562abdc0caae5f7739b9a458bc493362291518369b0",
+    "bytes": 279460,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/df58b958b69168e4.art"
+  },
+  {
+    "module": "Formalism.SharpRestriction.Divisibility.SlopeExcess.HeightBoundOfComponentBounds",
+    "hash": "1fd8bdcf62251f57",
+    "archive": "6db480e58fca1ed2.ltar",
+    "sha256": "85bec182e699c7a3800eb318ebfcea9261ea03ccfe4440de5d2e3c3c6b898a95",
+    "bytes": 34310,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/6db480e58fca1ed2.art"
+  },
+  {
+    "module": "Main",
+    "hash": "93185a1071e30397",
+    "archive": "531379566893bc04.ltar",
+    "sha256": "b28069c2670a2df1dbbf65f39004d4d20088d970292091b948b1aa3b37a0d151",
+    "bytes": 1896,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/531379566893bc04.art"
+  },
+  {
+    "module": "Statements",
+    "hash": "a121e2095f8be480",
+    "archive": "fb90861f8fcd109a.ltar",
+    "sha256": "16f8f4c318fcf5db0e87a4b7b7f22941c4832c9ca4962ec9e56e25f8b123c7a3",
+    "bytes": 2594,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/fb90861f8fcd109a.art"
+  },
+  {
+    "module": "Supplements.Kernels.MainTheorems",
+    "hash": "4826b85db0086cd6",
+    "archive": "a822b909604ff47e.ltar",
+    "sha256": "c6569712a5dc0d4f1078664cf184948df70c7169f011753095f37e144b77766f",
+    "bytes": 2895,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/a822b909604ff47e.art"
+  },
+  {
+    "module": "Supplements.Kernels.MainTheoremsAll",
+    "hash": "f4d5328c2c523eb3",
+    "archive": "6ced02b2f5aba627.ltar",
+    "sha256": "2eb948cf55e369f76a7ef0435e7300252b9936b7a45ecade2d1f90e607b41247",
+    "bytes": 1159,
+    "url": "https://rh-cache.taucetiproject.org/artifacts/leanprover-community/riemann-hypothesis/6ced02b2f5aba627.art"
+  }
+]

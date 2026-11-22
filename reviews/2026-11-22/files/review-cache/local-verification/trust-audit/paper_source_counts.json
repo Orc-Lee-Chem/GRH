@@ -1,0 +1,87 @@
+{
+  "geoOf_surf": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "secondChernDegree_vanishes_trueSurfaces": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "degCh2_eq_zero": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "geoTied": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "formsTieX": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "degree_value_of_determinant": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "anyGeometry": {
+    "occurrences": 162,
+    "lines": 118,
+    "files": 24
+  },
+  "GeoCl": {
+    "occurrences": 7,
+    "lines": 6,
+    "files": 2
+  },
+  "degHH_def": {
+    "occurrences": 1,
+    "lines": 1,
+    "files": 1
+  },
+  "every_character_of_green_v_win": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 2
+  },
+  "zero_free_all_of_green_v_win": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 1
+  },
+  "zeroFreeAll_of_topG": {
+    "occurrences": 3,
+    "lines": 3,
+    "files": 3
+  },
+  "nonempty_hyps_definite_side_of_closed_bound": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 1
+  },
+  "forall_goal_of_shape_of_hyps": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 2
+  },
+  "shape_closed_link_n_of_green": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 2
+  },
+  "closed_linkDIVt_of_closed_bridge_kernel": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 2
+  },
+  "zeroFreeOn_of_tiedWin_cyc": {
+    "occurrences": 2,
+    "lines": 2,
+    "files": 2
+  }
+}

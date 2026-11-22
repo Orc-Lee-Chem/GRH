@@ -1,0 +1,67 @@
+[
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/AnalyticChartsRealizationCompPointEq.lean",
+    "line": 72,
+    "text": "structure Real (K : Charts F) (s : X ⟶ Sp B) (σ : B →+* Hol F.V) where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/IsTaylorExpansionOrderOne.lean",
+    "line": 106,
+    "text": "def Real.objD (S : K.DObj η M) : Thick κ s' where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/IsTaylorExpansionOrderOne.lean",
+    "line": 126,
+    "text": "def Real.coefD : CoefMap ι (O κ s') (K.OD η M) where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/SubRedMem.lean",
+    "line": 192,
+    "text": "def Real.tenObj (T : K.Obj) : Thick κ s' where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/SubRedMem.lean",
+    "line": 219,
+    "text": "def Real.tenFunctor : K.Obj ⥤ Thick κ s' where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/Divisors/SubRedMem.lean",
+    "line": 231,
+    "text": "def Real.tenCoef : CoefMap ι (O κ s') (K.Ten D) where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/KerIsTerm.lean",
+    "line": 117,
+    "text": "structure Real (i : ℕ) (sp : Split (B.J.A i) B.J.T) (M : PtModel B.ch i) where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/GlobalTwisting/KerIsTerm.lean",
+    "line": 151,
+    "text": "structure Real.ValIs {sp : Split (B.J.A i) B.J.T} {M : PtModel B.ch i} (R : B.Real i sp M) (Co : M.Coord) : Prop where"
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/LatticeFrames/OnFramesRdApply.lean",
+    "line": 94,
+    "text": "def Real (_A : ClsK ρ t) : Prop :="
+  },
+  {
+    "path": "src/Development/AbelianVarietyTheory/Definitions/NonGaloisDescent/ResBound.lean",
+    "line": 65,
+    "text": "def Real : Prop :="
+  },
+  {
+    "path": "src/Formalism/CoboundaryTransfers/StatementAPI.lean",
+    "line": 7,
+    "text": "def Complex : Prop :="
+  },
+  {
+    "path": "src/GroundTheory/GlobalFields/ComplexMultiplication/AutCFixed.lean",
+    "line": 118,
+    "text": "theorem Complex.isAlgebraic_of_finite_conjugates {x : ℂ}"
+  },
+  {
+    "path": "src/GroundTheory/GlobalFields/ComplexMultiplication/ExistsRingEquivExtendOfIsTranscendenceBasis.lean",
+    "line": 53,
+    "text": "theorem Complex.exists_ringEquiv_extend_of_trdeg_eq (F₁ F₂ : Subfield ℂ) (e : F₁ ≃+* F₂)"
+  }
+]

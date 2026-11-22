@@ -1,0 +1,32 @@
+[
+  {
+    "file": "issue_14576_min.lean",
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/tests/elab/issue_14576_min.lean",
+    "sha256": "77769c1ce88649f56bf1fc8a0ae89fafdef25eae17b744fc7f28cb7b9519cbb5",
+    "bytes": 804
+  },
+  {
+    "file": "kernelImaxProp.lean",
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/tests/elab/kernelImaxProp.lean",
+    "sha256": "8c4cd367dd32708093a47976df4298bb4ffd5c01b48154bd7a96c6f789f73b0b",
+    "bytes": 1466
+  },
+  {
+    "file": "kernel_is_def_eq_equiv_manager_1.lean",
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/tests/elab/kernel_is_def_eq_equiv_manager_1.lean",
+    "sha256": "e71c39dde4b14eb47faa3672e0eeef1749dba91be56eb6e6a02ee1b415e2546c",
+    "bytes": 7000
+  },
+  {
+    "file": "kernel_is_def_eq_equiv_manager_2.lean",
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/tests/elab/kernel_is_def_eq_equiv_manager_2.lean",
+    "sha256": "af90337e3572df1a539b445f49bd95740147bd7156dd914ae7d0037943abc21b",
+    "bytes": 7737
+  },
+  {
+    "file": "kernel_is_prop_ensure_sort.lean",
+    "url": "https://raw.githubusercontent.com/leanprover/lean4/819816b2e0a3bf405af45ae5c7af2491d8f5bee6/tests/elab/kernel_is_prop_ensure_sort.lean",
+    "sha256": "3d020eeff9a814893cd2ab4ba7e06f827c727fe80f0bc8582166b606e9e2f061",
+    "bytes": 3914
+  }
+]

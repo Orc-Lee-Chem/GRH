@@ -1,0 +1,37 @@
+{
+  "mit_audit.log": {
+    "published_name": "audit.log",
+    "sha256": "0a1473fce6eed840011f4a76b1c51558fc6f03edd1e6bd1ee542e6c738d87a62",
+    "matches_same_site_manifest": true
+  },
+  "comparator.json": {
+    "published_name": "comparator.json",
+    "sha256": "8ea890e6ccda9cf3983ada343af18a41d12542036875a3936e7925ed5b1582ff",
+    "matches_same_site_manifest": true
+  },
+  "con-leche-compare.log": {
+    "published_name": "con-leche-compare.log",
+    "sha256": "5a068bf55f24904eea9f05eda947c63d43bdee3c6ab0490e43943a3bd9af1f6e",
+    "matches_same_site_manifest": true
+  },
+  "con-ron-compare.log": {
+    "published_name": "con-ron-compare.log",
+    "sha256": "dcf2fbbde0e27ef8828b7d788ea7b9f9f65ba7a8246798ffd47298f89a3ee2ff",
+    "matches_same_site_manifest": true
+  },
+  "nanoda.log": {
+    "published_name": "nanoda.log",
+    "sha256": "d4c5360b02d8dd885150c1cc28b616cb6fb5bf5b20d142558d79a7b15ae9d9df",
+    "matches_same_site_manifest": true
+  },
+  "sandbox-build.sh": {
+    "published_name": "sandbox-build.sh",
+    "sha256": "40a32f7ee81f4c0bbd80822fff5061c017b7e64a2087789c80130185f7cfff34",
+    "matches_same_site_manifest": true
+  },
+  "sandbox-timeline.txt": {
+    "published_name": "sandbox-timeline.txt",
+    "sha256": "610dafdbc29c51433906d59b6e0c5ce8b48808770bf53cf7e2dc8fd93c63792c",
+    "matches_same_site_manifest": true
+  }
+}

@@ -1,0 +1,4 @@
+KexactControlBad.lean:10:8: error: (kernel) declaration type mismatch, 'controlBad' has type
+  True
+but it is expected to have type
+  False

@@ -1,0 +1,151 @@
+{
+  "release_url": "https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-windows.zip",
+  "network_bytes": 2449008,
+  "seconds": 10.608999999938533,
+  "files": [
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/DocString/Builtin.ir",
+      "offset": 357610872,
+      "compressed": 532133,
+      "bytes": 2245672,
+      "crc": 3124826968,
+      "method": 8,
+      "sha256": "cc3693c18fbe1a521e1287f313dcd40fe7a48240c0abebc55023d84424dd50fc"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/DocString/Builtin.ir.sig",
+      "offset": 358143122,
+      "compressed": 86,
+      "bytes": 176,
+      "crc": 3772716732,
+      "method": 8,
+      "sha256": "29001f69d639ffe8c47ee29a0f4bf3dadbfd74ca618910c417dcf8c78cd48e91"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Do/Spec.ir",
+      "offset": 415884998,
+      "compressed": 170668,
+      "bytes": 741184,
+      "crc": 2067563179,
+      "method": 8,
+      "sha256": "a639ce9f16bbe11446dffae5b046fd57093ba4315aded93d3da55946f898a37e"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Do/Spec.ir.sig",
+      "offset": 416055780,
+      "compressed": 86,
+      "bytes": 176,
+      "crc": 1585179903,
+      "method": 8,
+      "sha256": "feedb680d6f02d9bedc19125ffee0bf4d9cb02f10a7523e82e146f696885413d"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Do/VCGen/SuggestInvariant.ir",
+      "offset": 417632541,
+      "compressed": 108805,
+      "bytes": 492288,
+      "crc": 1683752891,
+      "method": 8,
+      "sha256": "f90265b443ac80dcf6541259dd94b3c4bbec2ae9dde333dd873cb80ed720e7ca"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Do/VCGen/SuggestInvariant.ir.sig",
+      "offset": 417741478,
+      "compressed": 86,
+      "bytes": 176,
+      "crc": 4070636480,
+      "method": 8,
+      "sha256": "cbeb9d8e982bd7637539b4694209382c0c6b1c03d7256243918eaf102d149822"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Grind/Lint.ir",
+      "offset": 424748278,
+      "compressed": 99133,
+      "bytes": 400576,
+      "crc": 2612430426,
+      "method": 8,
+      "sha256": "732be0a04ef5e58448c3824dad20f25e2427d67dcfd43aad8167375d3c8ae2d7"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Elab/Tactic/Grind/Lint.ir.sig",
+      "offset": 424847528,
+      "compressed": 86,
+      "bytes": 176,
+      "crc": 1036336126,
+      "method": 8,
+      "sha256": "144f88e785706295c533f788d09edd78cd78c99ad05eca57c3cf8a5c3aff336b"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/LibrarySuggestions/SineQuaNon.ir",
+      "offset": 451946581,
+      "compressed": 124757,
+      "bytes": 531632,
+      "crc": 1943308522,
+      "method": 8,
+      "sha256": "39f4eeb9d2344e4e4895871a4f4c35df35a78ac65a555b7aec1e69a36bacfc55"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/LibrarySuggestions/SineQuaNon.ir.sig",
+      "offset": 452071462,
+      "compressed": 85,
+      "bytes": 176,
+      "crc": 1951775604,
+      "method": 8,
+      "sha256": "149ea539d1d69038b4d26da6ae66f1b1b31160e7ec1b4862f7f7e69f3d768deb"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Linter/EnvLinter/Frontend.ir",
+      "offset": 454295450,
+      "compressed": 76346,
+      "bytes": 323416,
+      "crc": 3718834478,
+      "method": 8,
+      "sha256": "e25f7e16e60086d405bb884b6b8925f20a4d8b615db0e9b77324a4a020d29426"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Linter/EnvLinter/Frontend.ir.sig",
+      "offset": 454371916,
+      "compressed": 86,
+      "bytes": 176,
+      "crc": 3724075767,
+      "method": 8,
+      "sha256": "c0224812aae0d6a30771c6b9beff475d9402946e2c5b5ead6d0649304377c808"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Meta/Native.ir",
+      "offset": 486481611,
+      "compressed": 35627,
+      "bytes": 151976,
+      "crc": 2351408611,
+      "method": 8,
+      "sha256": "b6e34cf7420f86aff7993428943ebd2d7f334cc8d6cf1d58efe1fe7e334ff8ae"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Meta/Native.ir.sig",
+      "offset": 486517344,
+      "compressed": 85,
+      "bytes": 176,
+      "crc": 442506764,
+      "method": 8,
+      "sha256": "9f60d66ebcce0551c29a8d880afca3e5d7972e4c8abcfd61167584e5135c23ff"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Util/CollectAxioms.ir",
+      "offset": 618672218,
+      "compressed": 31504,
+      "bytes": 121248,
+      "crc": 3698324992,
+      "method": 8,
+      "sha256": "e221164732b40f161a810056b15147ccd0fa065da4b7d5c39eba7605fbc3c7ed"
+    },
+    {
+      "name": "lean-4.33.1-windows/lib/lean/Lean/Util/CollectAxioms.ir.sig",
+      "offset": 618703835,
+      "compressed": 85,
+      "bytes": 176,
+      "crc": 2213425103,
+      "method": 8,
+      "sha256": "46f20906a9dcf4f9c58f653318c1a32d2d8e1f9ec5c0c81a11ab029480f527d1"
+    }
+  ]
+}

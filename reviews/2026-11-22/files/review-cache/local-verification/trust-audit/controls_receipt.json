@@ -1,0 +1,28 @@
+{
+  "all_controls_passed": true,
+  "acceptance_controls": {
+    "command": [
+      "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+      "-j1",
+      "-M1536",
+      "TrustControls.lean"
+    ],
+    "exit_code": 0,
+    "seconds": 1.437,
+    "peak_rss_bytes": 254873600,
+    "output": "'TrustControls.extraAxiom' depends on axioms: [missingFact]\nTrustControls.lean:10:8: warning: declaration uses `sorry`\n'TrustControls.incomplete' depends on axioms: [sorryAx]\ntheorem TrustControls.conditional : False → 0 = 1 :=\nfun h => False.elim h\n'TrustControls.conditional' does not depend on any axioms\ndef TrustControls.Shadowed.RiemannHypothesis : Prop :=\nTrue\n'TrustControls.Shadowed.fakeRH' does not depend on any axioms\n"
+  },
+  "wrong_goal_rejected": {
+    "command": [
+      "${WORKSPACE}\\review-cache\\local-verification\\toolchain\\bin\\lean.exe",
+      "-j1",
+      "-M1536",
+      "RejectWrongGoal.lean"
+    ],
+    "exit_code": 1,
+    "seconds": 1.532,
+    "peak_rss_bytes": 252559360,
+    "output": "RejectWrongGoal.lean:8:35: error: Type mismatch\n  candidate\nhas type\n  RiemannHypothesis\nbut is expected to have type\n  0 = 1\n"
+  },
+  "scope": "Tests of local checking distinctions on isolated examples; no new RH kernel replay."
+}
